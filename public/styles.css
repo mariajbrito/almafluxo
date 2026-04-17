@@ -20,7 +20,7 @@
 }
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; }
-body { font-family: 'Gelasio', serif; color: var(--muted); background: var(--white); line-height: 1.65; }
+body { font-family: 'Fustat', sans-serif; color: var(--muted); background: var(--white); line-height: 1.65; }
 img { max-width: 100%; height: auto; display: block; }
 a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
