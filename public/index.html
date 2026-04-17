@@ -276,14 +276,6 @@
             background: linear-gradient(130deg, #00b3db 0%, #5aa5ec 100%);
             -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
         }
-        .hero h1 .ul-word { position: relative; display: inline-block; }
-        .hero h1 .ul-word::after {
-            content: ''; position: absolute; bottom: 2px; left: 0; right: 0; height: 5px;
-            background: linear-gradient(90deg, #00b3db, #1f74d4); border-radius: 3px;
-            transform: scaleX(0); transform-origin: left;
-            animation: lineGrow .9s .5s forwards ease-out;
-        }
-        @keyframes lineGrow { to { transform: scaleX(1); } }
         .hero p { font-size: 1.08rem; color: rgba(255,255,255,.77); margin-bottom: 40px; max-width: 520px; line-height: 1.8; }
         .hero-btns { display: flex; gap: 13px; flex-wrap: wrap; margin-bottom: 48px; }
         .hero-stats {
@@ -686,7 +678,7 @@
                 <h1>
                     <span class="eyebrow">Lisboa e Região · Especialistas</span>
                     Soluções em<br>
-                    <span class="accent ul-word">Canalização,</span><br>
+                    <span class="accent">Canalização,</span><br>
                     Água e Gás
                 </h1>
                 <p>Reparação de fugas de água e gás, soldaduras em tubos de chumbo, substituição de olho de boi e instalação de sistemas completos. Profissionalismo e qualidade garantidos em cada intervenção.</p>
