@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Almafluxo Lda – Canalização, Reparação de Fugas de Água e Gás em Lisboa</title>
+    <meta name="description" content="Almafluxo Lda – Especialistas em reparação de fuga de água, reparação de fuga de gás, soldaduras em tubos de chumbo e substituição de olho de boi. Empresa credenciada pela DGEG. Lisboa e região.">
+    <meta name="keywords" content="reparação fuga de água, reparação fuga de gás, soldaduras em tubos de chumbo, substituição de olho de boi, canalização, ar condicionado, esquentador, termoacumulador, sistemas de rega, DGEG, Lisboa">
+    <meta name="author" content="Almafluxo Lda">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Almafluxo Lda – Especialistas em Canalização, Água e Gás">
+    <meta property="og:description" content="Empresa credenciada pela DGEG. Reparação de fugas de água e gás, canalização, ar condicionado e sistemas de rega em Lisboa.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://almafluxo.pt">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <style>
+        :root {
+            --p: #1f74d4;
+            --s: #00b3db;
+            --a: #5aa5ec;
+            --dark: #0a2240;
+            --navy: #071829;
+            --light: #e8f4fd;
+            --bg: #f5f9ff;
+            --white: #fff;
+            --border: #dde8f5;
+            --text: #1a2a3a;
+            --muted: #556070;
+            --sh1: 0 2px 8px rgba(0,0,0,.07);
+            --sh2: 0 6px 24px rgba(0,0,0,.11);
+            --sh3: 0 12px 48px rgba(0,0,0,.15);
+            --r1: 8px;
+            --r2: 14px;
+            --r3: 22px;
+            --ease: .3s ease;
+        }
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; color: var(--muted); background: var(--white); line-height: 1.65; }
+        img { max-width: 100%; height: auto; display: block; }
+        a { text-decoration: none; color: inherit; }
+        ul { list-style: none; }
+
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+        .sec-tag {
+            display: inline-block;
+            background: var(--light);
+            color: var(--p);
+            font-size: .75rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 50px;
+            margin-bottom: 14px;
+        }
+        .sec-title {
+            font-size: clamp(1.75rem, 3vw, 2.4rem);
+            font-weight: 800;
+            color: var(--text);
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+        .sec-sub { font-size: 1.02rem; color: var(--muted); max-width: 580px; margin: 0 auto; line-height: 1.75; }
+        .sec-head { text-align: center; margin-bottom: 52px; }
+        .btn {
+            display: inline-flex; align-items: center; gap: 8px;
+            padding: 13px 26px; border-radius: 50px;
+            font-weight: 600; font-size: .93rem;
+            transition: var(--ease); cursor: pointer; border: none;
+        }
+        .btn-p { background: var(--p); color: var(--white); }
+        .btn-p:hover { background: var(--dark); transform: translateY(-2px); box-shadow: 0 8px 24px rgba(31,116,212,.4); }
+        .btn-wa { background: #25D366; color: var(--white); }
+        .btn-wa:hover { background: #1dbd5a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,.4); }
+        .btn-out { background: transparent; color: var(--white); border: 2px solid rgba(255,255,255,.65); }
+        .btn-out:hover { background: rgba(255,255,255,.12); border-color: var(--white); }
+
+        /* WhatsApp Float */
+        .wa-float {
+            position: fixed; bottom: 28px; right: 28px;
+            width: 58px; height: 58px;
+            background: #25D366; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.55rem;
+            box-shadow: 0 4px 20px rgba(37,211,102,.5);
+            z-index: 9999; transition: var(--ease);
+            animation: wapulse 2.5s infinite;
+        }
+        .wa-float:hover { transform: scale(1.1); }
+        .wa-float .tip {
+            position: absolute; right: 68px;
+            background: var(--text); color: white;
+            padding: 6px 12px; border-radius: 6px;
+            font-size: .78rem; white-space: nowrap;
+            opacity: 0; pointer-events: none; transition: opacity .3s;
+            font-family: 'Inter', sans-serif;
+        }
+        .wa-float:hover .tip { opacity: 1; }
+        @keyframes wapulse {
+            0%   { box-shadow: 0 0 0 0 rgba(37,211,102,.55); }
+            70%  { box-shadow: 0 0 0 14px rgba(37,211,102,0); }
+            100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+        }
+
+        /* Header */
+        #hdr {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            background: rgba(255,255,255,.97);
+            backdrop-filter: blur(12px);
+            transition: var(--ease);
+        }
+        #hdr.scrolled { box-shadow: var(--sh2); }
+        .hdr-in {
+            display: flex; align-items: center;
+            justify-content: space-between; height: 70px;
+        }
+        .logo { display: flex; align-items: center; gap: 11px; }
+        .logo img { height: 46px; width: auto; }
+        .logo-txt .nm { font-size: 1.2rem; font-weight: 800; color: var(--p); line-height: 1; display: block; }
+        .logo-txt .tg { font-size: .62rem; color: var(--muted); letter-spacing: .06em; text-transform: uppercase; }
+        .nav { display: flex; align-items: center; gap: 4px; }
+        .nl {
+            padding: 7px 11px; font-size: .875rem; font-weight: 500;
+            color: var(--text); border-radius: var(--r1); transition: var(--ease);
+        }
+        .nl:hover, .nl.act { color: var(--p); background: var(--light); }
+        .ni { position: relative; }
+        .nd-tog { display: flex; align-items: center; gap: 5px; cursor: pointer; }
+        .nd-tog .ch { font-size: .65rem; transition: transform .25s; }
+        .ni:hover .ch { transform: rotate(180deg); }
+        .dd {
+            position: absolute; top: calc(100% + 6px); left: 50%;
+            transform: translateX(-50%) translateY(-8px);
+            background: var(--white); border-radius: var(--r2);
+            box-shadow: var(--sh3); border: 1px solid var(--border);
+            min-width: 290px; padding: 8px;
+            opacity: 0; visibility: hidden;
+            transition: all .22s ease;
+        }
+        .ni:hover .dd { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+        .di {
+            display: flex; align-items: center; gap: 11px;
+            padding: 9px 12px; border-radius: var(--r1);
+            color: var(--text); font-size: .855rem; font-weight: 500;
+            transition: var(--ease);
+        }
+        .di:hover { background: var(--light); color: var(--p); }
+        .di .ic {
+            width: 30px; height: 30px; background: var(--light);
+            border-radius: 7px; display: flex; align-items: center;
+            justify-content: center; color: var(--p); font-size: .8rem; flex-shrink: 0;
+        }
+        .di:hover .ic { background: var(--p); color: white; }
+        .nav-cta {
+            background: var(--p); color: white;
+            padding: 9px 20px; border-radius: 50px;
+            font-size: .855rem; font-weight: 600;
+            transition: var(--ease); margin-left: 6px;
+        }
+        .nav-cta:hover { background: var(--dark); transform: translateY(-1px); }
+        .burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
+        .burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: var(--ease); }
+        .burger.on span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
+        .burger.on span:nth-child(2) { opacity: 0; }
+        .burger.on span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+        .mob-menu {
+            display: none; position: fixed;
+            top: 70px; left: 0; right: 0;
+            background: white; border-top: 1px solid var(--border);
+            box-shadow: var(--sh3); padding: 16px 24px 24px;
+            z-index: 999; max-height: calc(100vh - 70px); overflow-y: auto;
+        }
+        .mob-menu.on { display: block; }
+        .mob-nl { display: block; padding: 11px 0; color: var(--text); font-weight: 500; border-bottom: 1px solid var(--border); font-size: .9rem; }
+        .mob-dd-tit {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 11px 0; color: var(--text); font-weight: 500;
+            border-bottom: 1px solid var(--border); cursor: pointer; font-size: .9rem;
+        }
+        .mob-dd-body { display: none; padding: 6px 0 6px 14px; }
+        .mob-dd-body.on { display: block; }
+        .mob-dd-body a { display: block; padding: 7px 0; color: var(--muted); font-size: .86rem; }
+
+        /* Hero */
+        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+        .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transition: transform 7s ease; }
+        .hero-ov { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(7,24,41,.9) 0%, rgba(31,116,212,.62) 100%); z-index: 1; }
+        .hero-cnt { position: relative; z-index: 2; max-width: 680px; padding: 100px 0 80px; }
+        .hero-bdg {
+            display: inline-flex; align-items: center; gap: 8px;
+            background: rgba(255,255,255,.13); backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,.3); color: white;
+            padding: 7px 16px; border-radius: 50px;
+            font-size: .78rem; font-weight: 600; margin-bottom: 22px;
+        }
+        .hero-bdg i { color: var(--s); }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3.3rem); font-weight: 800; color: white; line-height: 1.15; margin-bottom: 18px; }
+        .hero h1 span { color: var(--s); }
+        .hero p { font-size: 1.07rem; color: rgba(255,255,255,.87); margin-bottom: 34px; max-width: 540px; line-height: 1.75; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+        .hero-feats {
+            display: flex; gap: 28px; margin-top: 52px;
+            padding-top: 36px; border-top: 1px solid rgba(255,255,255,.2); flex-wrap: wrap;
+        }
+        .hero-feat { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,.9); }
+        .hero-feat i { color: var(--s); font-size: 1rem; }
+        .hero-feat span { font-size: .87rem; font-weight: 500; }
+
+        /* Strip */
+        .strip { background: linear-gradient(135deg, var(--dark), var(--p)); padding: 28px 0; }
+        .strip-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 4px; }
+        .strip-i {
+            display: flex; flex-direction: column; align-items: center; gap: 7px;
+            padding: 14px 6px; border-radius: var(--r2); color: white;
+            transition: var(--ease); text-align: center; cursor: pointer;
+        }
+        .strip-i:hover { background: rgba(255,255,255,.14); transform: translateY(-3px); }
+        .strip-i i { font-size: 1.5rem; color: var(--s); }
+        .strip-i span { font-size: .68rem; font-weight: 500; line-height: 1.3; }
+
+        /* About */
+        .about { padding: 96px 0; }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .about-img-wrap { position: relative; }
+        .about-img-wrap img { width: 100%; height: 480px; object-fit: cover; border-radius: var(--r3); }
+        .about-num {
+            position: absolute; bottom: 22px; left: 22px;
+            background: var(--p); color: white;
+            padding: 14px 18px; border-radius: var(--r2); text-align: center;
+        }
+        .about-num .n { font-size: 1.9rem; font-weight: 800; line-height: 1; }
+        .about-num .l { font-size: .7rem; opacity: .9; }
+        .about-txt { font-size: .95rem; line-height: 1.8; margin-bottom: 18px; }
+        .about-feats { display: flex; flex-direction: column; gap: 15px; margin: 24px 0; }
+        .about-feat { display: flex; align-items: flex-start; gap: 13px; }
+        .about-feat .ic {
+            width: 38px; height: 38px; background: var(--light);
+            border-radius: 9px; display: flex; align-items: center;
+            justify-content: center; color: var(--p); flex-shrink: 0;
+        }
+        .about-feat h4 { font-weight: 600; color: var(--text); margin-bottom: 3px; font-size: .9rem; }
+        .about-feat p { font-size: .83rem; }
+        .dgeg {
+            display: flex; align-items: center; gap: 14px;
+            background: linear-gradient(135deg, var(--light), #d8edfb);
+            border: 2px solid var(--a); border-radius: var(--r2);
+            padding: 18px 22px; margin-top: 28px;
+        }
+        .dgeg-ic {
+            width: 48px; height: 48px; background: var(--p); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: white; font-size: 1.2rem; flex-shrink: 0;
+        }
+        .dgeg h4 { font-weight: 700; color: var(--text); margin-bottom: 3px; font-size: .95rem; }
+        .dgeg p { font-size: .83rem; }
+
+        /* Services */
+        .services { padding: 96px 0; background: var(--bg); }
+        .srv-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
+        .srv-card { background: var(--white); border-radius: var(--r3); overflow: hidden; box-shadow: var(--sh1); transition: var(--ease); }
+        .srv-card:hover { transform: translateY(-6px); box-shadow: var(--sh3); }
+        .srv-img { height: 196px; overflow: hidden; }
+        .srv-img img { width: 100%; height: 100%; object-fit: cover; transition: transform .5s ease; }
+        .srv-card:hover .srv-img img { transform: scale(1.08); }
+        .srv-body { padding: 22px; }
+        .srv-ic {
+            width: 42px; height: 42px; background: var(--light);
+            border-radius: 11px; display: flex; align-items: center;
+            justify-content: center; color: var(--p); font-size: 1.05rem; margin-bottom: 13px;
+        }
+        .srv-body h3 { font-size: .97rem; font-weight: 700; color: var(--text); margin-bottom: 9px; line-height: 1.35; }
+        .srv-body p { font-size: .85rem; line-height: 1.65; }
+        .srv-lnk {
+            display: inline-flex; align-items: center; gap: 5px;
+            margin-top: 14px; color: var(--p); font-size: .85rem; font-weight: 600;
+            transition: gap .2s;
+        }
+        .srv-lnk:hover { gap: 9px; }
+
+        /* SEO section */
+        .seo { padding: 80px 0; }
+        .seo-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 28px; }
+        .seo-card { background: var(--bg); border-radius: var(--r2); padding: 28px 30px; border-left: 4px solid var(--p); }
+        .seo-card h3 { font-size: 1.05rem; font-weight: 700; color: var(--text); margin-bottom: 11px; display: flex; align-items: center; gap: 9px; }
+        .seo-card h3 i { color: var(--p); }
+        .seo-card p { font-size: .88rem; line-height: 1.75; }
+
+        /* Gallery */
+        .gallery { padding: 96px 0; background: var(--bg); }
+        .gal-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+        .gal-i { position: relative; overflow: hidden; border-radius: var(--r1); cursor: pointer; }
+        .gal-i img { width: 100%; height: 220px; object-fit: cover; transition: transform .5s ease; display: block; }
+        .gal-i.wide { grid-column: span 2; }
+        .gal-i.wide img { height: 220px; }
+        .gal-i:hover img { transform: scale(1.07); }
+        .gal-ov {
+            position: absolute; inset: 0;
+            background: rgba(31,116,212,0); display: flex;
+            align-items: center; justify-content: center;
+            color: white; font-size: 1.4rem; z-index: 1;
+            transition: background .3s, opacity .3s; opacity: 0;
+        }
+        .gal-i:hover .gal-ov { background: rgba(31,116,212,.35); opacity: 1; }
+
+        /* Cert */
+        .cert {
+            padding: 72px 0;
+            background: linear-gradient(135deg, var(--dark), var(--p));
+            color: white; text-align: center;
+        }
+        .cert-in { max-width: 680px; margin: 0 auto; }
+        .cert-ic {
+            width: 74px; height: 74px; background: rgba(255,255,255,.14);
+            border-radius: 50%; display: flex; align-items: center; justify-content: center;
+            font-size: 1.9rem; margin: 0 auto 20px; border: 2px solid rgba(255,255,255,.3);
+        }
+        .cert h2 { font-size: 1.75rem; font-weight: 800; margin-bottom: 14px; }
+        .cert p { font-size: .97rem; opacity: .9; line-height: 1.75; margin-bottom: 6px; }
+        .cert-bdg {
+            display: inline-flex; align-items: center; gap: 9px;
+            background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.4);
+            padding: 11px 22px; border-radius: 50px; margin-top: 22px; font-weight: 600; font-size: .9rem;
+        }
+
+        /* Contact */
+        .contact { padding: 96px 0; }
+        .contact-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: start; }
+        .c-info h2 { font-size: 1.7rem; font-weight: 800; color: var(--text); margin-bottom: 14px; line-height: 1.25; }
+        .c-info > p { margin-bottom: 28px; line-height: 1.75; font-size: .93rem; }
+        .c-items { display: flex; flex-direction: column; gap: 18px; margin-bottom: 32px; }
+        .c-item { display: flex; align-items: flex-start; gap: 14px; }
+        .c-item .ic {
+            width: 42px; height: 42px; background: var(--light);
+            border-radius: 11px; display: flex; align-items: center;
+            justify-content: center; color: var(--p); flex-shrink: 0;
+        }
+        .c-item h4 { font-weight: 600; color: var(--text); font-size: .85rem; margin-bottom: 3px; }
+        .c-item a, .c-item p { font-size: .88rem; }
+        .c-item a:hover { color: var(--p); }
+        .wa-cta {
+            background: #25D366; color: white;
+            padding: 15px 26px; border-radius: 50px;
+            display: inline-flex; align-items: center; gap: 9px;
+            font-weight: 700; font-size: .97rem; transition: var(--ease);
+        }
+        .wa-cta:hover { background: #1dbd5a; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(37,211,102,.4); }
+        .wa-cta i { font-size: 1.15rem; }
+        .c-form { background: var(--bg); border-radius: var(--r3); padding: 38px; }
+        .c-form h3 { font-size: 1.25rem; font-weight: 700; color: var(--text); margin-bottom: 22px; }
+        .fg { margin-bottom: 18px; }
+        .fg label { display: block; font-size: .84rem; font-weight: 600; color: var(--text); margin-bottom: 7px; }
+        .fg input, .fg select, .fg textarea {
+            width: 100%; padding: 11px 14px;
+            border: 2px solid var(--border); border-radius: var(--r1);
+            font-family: inherit; font-size: .88rem;
+            color: var(--text); background: white; transition: border-color .2s;
+        }
+        .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--p); }
+        .fg textarea { height: 110px; resize: vertical; }
+        .fg-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .f-sub {
+            width: 100%; padding: 13px;
+            background: var(--p); color: white;
+            border: none; border-radius: 50px;
+            font-family: inherit; font-size: .97rem;
+            font-weight: 600; cursor: pointer; transition: var(--ease);
+        }
+        .f-sub:hover { background: var(--dark); transform: translateY(-2px); }
+
+        /* Footer */
+        footer { background: var(--navy); color: rgba(255,255,255,.7); padding: 56px 0 0; }
+        .ft-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; padding-bottom: 44px; border-bottom: 1px solid rgba(255,255,255,.08); }
+        .ft-brand .logo img { filter: brightness(0) invert(1); }
+        .ft-brand .logo-txt .nm { color: var(--s); }
+        .ft-brand .logo-txt .tg { color: rgba(255,255,255,.45); }
+        .ft-brand p { font-size: .85rem; line-height: 1.75; margin: 14px 0 18px; color: rgba(255,255,255,.55); }
+        .ft-soc { display: flex; gap: 9px; }
+        .ft-soc a {
+            width: 34px; height: 34px; background: rgba(255,255,255,.08);
+            border-radius: 7px; display: flex; align-items: center;
+            justify-content: center; color: white; transition: var(--ease);
+        }
+        .ft-soc a:hover { background: var(--p); }
+        .ft-col h4 { font-size: .8rem; font-weight: 700; color: white; text-transform: uppercase; letter-spacing: .08em; margin-bottom: 18px; }
+        .ft-col ul { display: flex; flex-direction: column; gap: 9px; }
+        .ft-col ul a { font-size: .85rem; color: rgba(255,255,255,.55); transition: color .2s; }
+        .ft-col ul a:hover { color: var(--s); }
+        .ft-bot { padding: 18px 0; text-align: center; font-size: .77rem; color: rgba(255,255,255,.35); }
+
+        /* Animations */
+        .fi { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
+        .fi.vis { opacity: 1; transform: translateY(0); }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .srv-grid { grid-template-columns: repeat(2,1fr); }
+            .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
+            .strip-grid { grid-template-columns: repeat(4,1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav, .nav-cta { display: none; }
+            .burger { display: flex; }
+            .about-grid { grid-template-columns: 1fr; }
+            .about-img-wrap img { height: 280px; }
+            .contact-grid { grid-template-columns: 1fr; }
+            .seo-grid { grid-template-columns: 1fr; }
+            .gal-grid { grid-template-columns: repeat(2,1fr); }
+            .gal-i img, .gal-i.wide img { height: 160px; }
+            .gal-i.wide { grid-column: span 2; }
+            .ft-grid { grid-template-columns: 1fr; gap: 22px; }
+            .fg-row { grid-template-columns: 1fr; }
+            .c-form { padding: 24px; }
+            .strip-grid { grid-template-columns: repeat(4,1fr); }
+            .hero-feats { gap: 18px; }
+        }
+        @media (max-width: 480px) {
+            .strip-grid { grid-template-columns: repeat(2,1fr); }
+            .srv-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.me/351XXXXXXXXX" class="wa-float" target="_blank" aria-label="Contactar via WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <span class="tip">Fale connosco no WhatsApp</span>
+</a>
+
+<!-- HEADER -->
+<header id="hdr">
+    <div class="container">
+        <div class="hdr-in">
+            <a href="#inicio" class="logo">
+                <img src="public/logo.png.png" alt="Almafluxo Lda – Canalização Água e Gás">
+                <div class="logo-txt">
+                    <span class="nm">Almafluxo</span>
+                    <span class="tg">Canalização · Água · Gás</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <a href="#inicio" class="nl">Início</a>
+                <a href="#sobre" class="nl">Sobre Nós</a>
+                <div class="ni">
+                    <a href="#servicos" class="nl nd-tog">Serviços <i class="fas fa-chevron-down ch"></i></a>
+                    <div class="dd">
+                        <a href="#servicos" class="di"><span class="ic"><i class="fas fa-water"></i></span>Canalização – Água e Gás</a>
+                        <a href="#servicos" class="di"><span class="ic"><i class="fas fa-building"></i></span>Colunas de Água e Gás</a>
+                        <a href="#servicos" class="di"><span class="ic"><i class="fas fa-city"></i></span>Assistência a Condomínios</a>
+                        <a href="#servicos" class="di"><span class="ic"><i class="fas fa-snowflake"></i></span>Ar Condicionado</a>
+                        <a href="#servicos" class="di"><span class="ic"><i class="fas fa-fire"></i></span>Esquentadores</a>
+                        <a href="#servicos" class="di"><span class="ic"><i class="fas fa-thermometer-half"></i></span>Termoacumuladores</a>
+                        <a href="#servicos" class="di"><span class="ic"><i class="fas fa-seedling"></i></span>Sistemas de Rega</a>
+                    </div>
+                </div>
+                <a href="#galeria" class="nl">Galeria</a>
+                <a href="#contactos" class="nl">Contactos</a>
+            </nav>
+
+            <a href="#contactos" class="nav-cta">Pedir Orçamento</a>
+            <button class="burger" id="burger" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</header>
+
+<!-- Mobile Menu -->
+<div class="mob-menu" id="mob-menu">
+    <a href="#inicio" class="mob-nl">Início</a>
+    <a href="#sobre" class="mob-nl">Sobre Nós</a>
+    <div class="mob-dd-tit" id="mob-srv-tog">Serviços <i class="fas fa-chevron-down"></i></div>
+    <div class="mob-dd-body" id="mob-srv-body">
+        <a href="#servicos">Canalização – Água e Gás</a>
+        <a href="#servicos">Colunas de Água e Gás em Edifícios</a>
+        <a href="#servicos">Assistência a Condomínios</a>
+        <a href="#servicos">Ar Condicionado</a>
+        <a href="#servicos">Esquentadores</a>
+        <a href="#servicos">Termoacumuladores</a>
+        <a href="#servicos">Sistemas de Rega para Jardins</a>
+    </div>
+    <a href="#galeria" class="mob-nl">Galeria</a>
+    <a href="#contactos" class="mob-nl">Contactos</a>
+    <a href="#contactos" class="btn btn-p" style="margin-top:14px;justify-content:center;width:100%">Pedir Orçamento</a>
+</div>
+
+<!-- HERO -->
+<section id="inicio" class="hero">
+    <img class="hero-img" id="hero-img" src="public/reparaçãodefugasdeágua.jpeg.jpeg" alt="Reparação de fugas de água e gás – Almafluxo">
+    <div class="hero-ov"></div>
+    <div class="container">
+        <div class="hero-cnt">
+            <div class="hero-bdg"><i class="fas fa-shield-halved"></i> Empresa Credenciada pela DGEG</div>
+            <h1>Especialistas em <span>Canalização,</span><br>Água e Gás</h1>
+            <p>Reparação de fugas de água e gás, soldaduras em tubos de chumbo, substituição de olho de boi e instalação de sistemas completos. Profissionalismo e qualidade garantidos.</p>
+            <div class="hero-btns">
+                <a href="#contactos" class="btn btn-p"><i class="fas fa-phone"></i> Pedir Orçamento</a>
+                <a href="https://wa.me/351XXXXXXXXX" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+            <div class="hero-feats">
+                <div class="hero-feat"><i class="fas fa-bolt"></i><span>Resposta Rápida</span></div>
+                <div class="hero-feat"><i class="fas fa-certificate"></i><span>Credenciado DGEG</span></div>
+                <div class="hero-feat"><i class="fas fa-thumbs-up"></i><span>Trabalho Garantido</span></div>
+                <div class="hero-feat"><i class="fas fa-map-marker-alt"></i><span>Lisboa e Região</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STRIP -->
+<div class="strip">
+    <div class="container">
+        <div class="strip-grid">
+            <a href="#servicos" class="strip-i"><i class="fas fa-water"></i><span>Canalização Água e Gás</span></a>
+            <a href="#servicos" class="strip-i"><i class="fas fa-building"></i><span>Colunas de Edifícios</span></a>
+            <a href="#servicos" class="strip-i"><i class="fas fa-city"></i><span>Condomínios</span></a>
+            <a href="#servicos" class="strip-i"><i class="fas fa-snowflake"></i><span>Ar Condicionado</span></a>
+            <a href="#servicos" class="strip-i"><i class="fas fa-fire"></i><span>Esquentadores</span></a>
+            <a href="#servicos" class="strip-i"><i class="fas fa-thermometer-half"></i><span>Termoacumuladores</span></a>
+            <a href="#servicos" class="strip-i"><i class="fas fa-seedling"></i><span>Sistemas de Rega</span></a>
+        </div>
+    </div>
+</div>
+
+<!-- ABOUT -->
+<section id="sobre" class="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-img-wrap fi">
+                <img src="public/execuçãoderamaláguaegás.jpeg.jpeg" alt="Equipa Almafluxo em trabalho de canalização">
+                <div class="about-num"><div class="n">+20</div><div class="l">Anos de Experiência</div></div>
+            </div>
+            <div class="fi">
+                <div class="sec-head" style="text-align:left;margin-bottom:20px">
+                    <span class="sec-tag">Sobre Nós</span>
+                    <h2 class="sec-title">A Almafluxo ao Seu Serviço</h2>
+                </div>
+                <p class="about-txt">A <strong>Almafluxo Lda</strong> é uma empresa especializada em canalização, instalação e manutenção de sistemas de água e gás. Com vasta experiência no sector, prestamos um serviço de excelência a particulares, condomínios e empresas em Lisboa e região.</p>
+                <p class="about-txt">A nossa equipa é composta por profissionais qualificados e certificados, garantindo que todos os trabalhos são executados com rigor técnico, segurança e respeito pelas normas em vigor em Portugal.</p>
+                <div class="about-feats">
+                    <div class="about-feat">
+                        <div class="ic"><i class="fas fa-tools"></i></div>
+                        <div><h4>Profissionais Qualificados</h4><p>Equipa técnica experiente e certificada para todos os tipos de intervenção em água e gás.</p></div>
+                    </div>
+                    <div class="about-feat">
+                        <div class="ic"><i class="fas fa-bolt"></i></div>
+                        <div><h4>Resposta Rápida</h4><p>Atendemos com prontidão situações de emergência como fugas de água ou fugas de gás.</p></div>
+                    </div>
+                    <div class="about-feat">
+                        <div class="ic"><i class="fas fa-star"></i></div>
+                        <div><h4>Qualidade Garantida</h4><p>Utilizamos materiais e equipamentos de elevada qualidade em todos os trabalhos realizados.</p></div>
+                    </div>
+                </div>
+                <div class="dgeg">
+                    <div class="dgeg-ic"><i class="fas fa-award"></i></div>
+                    <div>
+                        <h4>Empresa Credenciada pela DGEG</h4>
+                        <p>A Almafluxo Lda é credenciada pela Direção-Geral de Energia e Geologia, garantindo conformidade técnica e legal em todas as instalações de gás.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SERVICES -->
+<section id="servicos" class="services">
+    <div class="container">
+        <div class="sec-head fi">
+            <span class="sec-tag">Os Nossos Serviços</span>
+            <h2 class="sec-title">Soluções Completas em Canalização, Água e Gás</h2>
+            <p class="sec-sub">Oferecemos uma gama completa de serviços para responder a todas as suas necessidades de canalização, aquecimento e climatização.</p>
+        </div>
+        <div class="srv-grid">
+            <div class="srv-card fi">
+                <div class="srv-img"><img src="public/canalizaçãodeáguaeminox.jpeg.jpeg" alt="Canalização de água em inox"></div>
+                <div class="srv-body">
+                    <div class="srv-ic"><i class="fas fa-water"></i></div>
+                    <h3>Canalização – Água e Gás</h3>
+                    <p>Instalação, reparação e manutenção de redes de água e gás em habitações, edifícios e espaços comerciais, com materiais certificados.</p>
+                    <a href="#contactos" class="srv-lnk">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="srv-card fi">
+                <div class="srv-img"><img src="public/canalizaçãodegásemedificio.jpeg.jpeg" alt="Colunas de gás em edifício"></div>
+                <div class="srv-body">
+                    <div class="srv-ic"><i class="fas fa-building"></i></div>
+                    <h3>Colunas de Água e Gás em Edifícios</h3>
+                    <p>Construção e reparação de colunas de água e gás em edifícios residenciais e comerciais, garantindo cumprimento das normas técnicas e de segurança.</p>
+                    <a href="#contactos" class="srv-lnk">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="srv-card fi">
+                <div class="srv-img"><img src="public/contadordeáguaembateria.jpeg.jpeg" alt="Contadores de água em bateria para condomínios"></div>
+                <div class="srv-body">
+                    <div class="srv-ic"><i class="fas fa-city"></i></div>
+                    <h3>Assistência a Condomínios</h3>
+                    <p>Serviço especializado de manutenção preventiva e corretiva das redes de água e gás em edifícios de habitação coletiva.</p>
+                    <a href="#contactos" class="srv-lnk">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="srv-card fi">
+                <div class="srv-img"><img src="public/pr einstalaçãodearcondicionado.jpeg.jpeg" alt="Instalação de ar condicionado"></div>
+                <div class="srv-body">
+                    <div class="srv-ic"><i class="fas fa-snowflake"></i></div>
+                    <h3>Comércio e Montagem de Ar Condicionado</h3>
+                    <p>Venda e instalação profissional de equipamentos de ar condicionado para habitação e comércio, com garantia de qualidade e eficiência energética.</p>
+                    <a href="#contactos" class="srv-lnk">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="srv-card fi">
+                <div class="srv-img"><img src="public/montagem caldeirade condensaçãovulcano.jpeg.jpeg" alt="Montagem de esquentador a gás"></div>
+                <div class="srv-body">
+                    <div class="srv-ic"><i class="fas fa-fire"></i></div>
+                    <h3>Comércio e Montagem de Esquentador</h3>
+                    <p>Venda e instalação de esquentadores a gás das principais marcas. Trabalho certificado com emissão de declaração de conformidade.</p>
+                    <a href="#contactos" class="srv-lnk">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="srv-card fi">
+                <div class="srv-img"><img src="public/montagemdebombadecalor.jpeg.jpeg" alt="Montagem de termoacumulador"></div>
+                <div class="srv-body">
+                    <div class="srv-ic"><i class="fas fa-thermometer-half"></i></div>
+                    <h3>Comércio e Montagem de Termoacumulador</h3>
+                    <p>Venda e instalação de termoacumuladores elétricos e a gás. Soluções eficientes para aquecimento de água sanitária em habitações e estabelecimentos.</p>
+                    <a href="#contactos" class="srv-lnk">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+            <div class="srv-card fi" style="grid-column: 1 / -1; max-width: 400px; margin: 0 auto; width: 100%">
+                <div class="srv-img"><img src="public/sistemaderegajardins.png.png" alt="Sistema de rega automático para jardins"></div>
+                <div class="srv-body">
+                    <div class="srv-ic"><i class="fas fa-seedling"></i></div>
+                    <h3>Sistemas de Rega para Jardins</h3>
+                    <p>Conceção, instalação e manutenção de sistemas de rega automática para jardins residenciais e comerciais. Soluções eficientes e personalizadas.</p>
+                    <a href="#contactos" class="srv-lnk">Pedir Orçamento <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- SEO CONTENT -->
+<section class="seo">
+    <div class="container">
+        <div class="sec-head fi">
+            <span class="sec-tag">A Nossa Especialidade</span>
+            <h2 class="sec-title">Reparamos, Instalamos e Mantemos</h2>
+            <p class="sec-sub">Soluções especializadas para as situações mais comuns e urgentes em canalização de água e gás.</p>
+        </div>
+        <div class="seo-grid">
+            <div class="seo-card fi">
+                <h3><i class="fas fa-tint-slash"></i> Reparação de Fuga de Água</h3>
+                <p>Uma <strong>fuga de água</strong> pode causar danos graves se não for tratada com rapidez. A Almafluxo intervém com urgência na <strong>reparação de fugas de água</strong> em tubagens, juntas, válvulas e ramais, minimizando prejuízos e garantindo soluções duradouras para habitações, edifícios e condomínios em Lisboa e região.</p>
+            </div>
+            <div class="seo-card fi">
+                <h3><i class="fas fa-fire-extinguisher"></i> Reparação de Fuga de Gás</h3>
+                <p>A <strong>reparação de fuga de gás</strong> é uma emergência que exige intervenção imediata por profissionais credenciados. A nossa equipa está habilitada e certificada pela DGEG para detetar e reparar fugas de gás natural e gás propano/butano com total segurança e rigor técnico.</p>
+            </div>
+            <div class="seo-card fi">
+                <h3><i class="fas fa-wrench"></i> Soldaduras em Tubos de Chumbo</h3>
+                <p>Realizamos <strong>soldaduras em tubos de chumbo</strong> em edifícios antigos, uma especialidade que requer experiência e técnica apurada. Esta intervenção é essencial na manutenção de infraestruturas de água em imóveis de construção anterior às décadas de 1970–80, muito comuns em Lisboa.</p>
+            </div>
+            <div class="seo-card fi">
+                <h3><i class="fas fa-circle-dot"></i> Substituição de Olho de Boi</h3>
+                <p>A <strong>substituição de olho de boi</strong> é um trabalho técnico que realizamos com rigor e rapidez. O olho de boi é a válvula de seccionamento da entrada de água no contador, e a sua substituição é necessária quando apresenta desgaste, fuga ou avaria, evitando desperdícios e danos maiores.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- GALLERY -->
+<section id="galeria" class="gallery">
+    <div class="container">
+        <div class="sec-head fi">
+            <span class="sec-tag">Galeria</span>
+            <h2 class="sec-title">Os Nossos Trabalhos</h2>
+            <p class="sec-sub">Uma mostra dos trabalhos realizados pela nossa equipa em diferentes tipos de intervenção em canalização, água e gás.</p>
+        </div>
+        <div class="gal-grid">
+            <div class="gal-i wide fi"><img src="public/substituiçãoderamaldeágua.jpeg.jpeg" alt="Substituição de ramal de água"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/válvulasdepassagemgás.jpg.jpg" alt="Válvulas de passagem de gás"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/substituiçãodevalvulaolhodeboi.jpeg.jpeg" alt="Substituição de válvula olho de boi"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/contadoresdegásembateriabaixapressãolisboa.jpeg.jpeg" alt="Contadores de gás em bateria de baixa pressão em Lisboa"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/equipamentodeensaiodeestanquidadedecanalizaçãodegás.jpeg.jpeg" alt="Ensaio de estanquidade em canalização de gás"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/ramaldeágua.jpeg.jpeg" alt="Ramal de água"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/caixaentradagásnaturalemedifício.jpeg.jpeg" alt="Caixa de entrada de gás natural em edifício"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/canalizaçãodeáguacomprotecçãotérmica.jpeg.jpeg" alt="Canalização de água com protecção térmica"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i wide fi"><img src="public/sistemasderegaparajardins.png.png" alt="Sistema de rega automático para jardins"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/coletorválvulasgásemcozinhaderestaurante.jpeg.jpeg" alt="Coletor de válvulas de gás em restaurante"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/contadoresdegásgplembateria.jpeg.jpeg" alt="Contadores de gás GPL em bateria"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+            <div class="gal-i fi"><img src="public/canalizaçãodegás.jpeg.jpeg" alt="Canalização de gás"><div class="gal-ov"><i class="fas fa-plus"></i></div></div>
+        </div>
+    </div>
+</section>
+
+<!-- CERTIFICATION BANNER -->
+<section class="cert">
+    <div class="cert-in fi">
+        <div class="cert-ic"><i class="fas fa-award"></i></div>
+        <h2>Empresa Credenciada pela DGEG</h2>
+        <p>A <strong>Almafluxo Lda</strong> é credenciada pela <strong>Direção-Geral de Energia e Geologia (DGEG)</strong>, garantindo que todos os trabalhos em instalações de gás são executados por profissionais habilitados, em conformidade com a legislação e normas técnicas em vigor em Portugal.</p>
+        <p>Esta credenciação é a sua garantia de segurança, qualidade e conformidade legal em cada intervenção.</p>
+        <div class="cert-bdg"><i class="fas fa-shield-halved"></i> Empresa Certificada · DGEG · Portugal</div>
+    </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contactos" class="contact">
+    <div class="container">
+        <div class="sec-head fi">
+            <span class="sec-tag">Contactos</span>
+            <h2 class="sec-title">Fale Connosco</h2>
+            <p class="sec-sub">Estamos disponíveis para responder a todas as suas questões e pedidos de orçamento sem compromisso.</p>
+        </div>
+        <div class="contact-grid">
+            <div class="c-info fi">
+                <h2>Precisa de Ajuda?<br>Contacte-nos Agora</h2>
+                <p>A Almafluxo está disponível para o ajudar com qualquer questão relacionada com canalização, água, gás, ar condicionado ou sistemas de rega. Ligue-nos ou envie mensagem pelo WhatsApp.</p>
+                <div class="c-items">
+                    <div class="c-item">
+                        <div class="ic"><i class="fas fa-phone"></i></div>
+                        <div><h4>Telefone</h4><a href="tel:+351XXXXXXXXX">+351 XXX XXX XXX</a></div>
+                    </div>
+                    <div class="c-item">
+                        <div class="ic"><i class="fas fa-envelope"></i></div>
+                        <div><h4>Email</h4><a href="mailto:geral@almafluxo.pt">geral@almafluxo.pt</a></div>
+                    </div>
+                    <div class="c-item">
+                        <div class="ic"><i class="fas fa-map-marker-alt"></i></div>
+                        <div><h4>Zona de Atuação</h4><p>Lisboa e Região</p></div>
+                    </div>
+                    <div class="c-item">
+                        <div class="ic"><i class="fas fa-clock"></i></div>
+                        <div><h4>Horário</h4><p>Segunda a Sexta: 8h00 – 18h00</p></div>
+                    </div>
+                </div>
+                <a href="https://wa.me/351XXXXXXXXX" class="wa-cta" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Enviar Mensagem no WhatsApp
+                </a>
+            </div>
+            <div class="c-form fi">
+                <h3>Pedir Orçamento Gratuito</h3>
+                <form id="contact-form" novalidate>
+                    <div class="fg-row">
+                        <div class="fg"><label>Nome *</label><input type="text" placeholder="O seu nome" required></div>
+                        <div class="fg"><label>Telefone *</label><input type="tel" placeholder="+351 XXX XXX XXX" required></div>
+                    </div>
+                    <div class="fg"><label>Email</label><input type="email" placeholder="o_seu@email.pt"></div>
+                    <div class="fg">
+                        <label>Serviço Pretendido</label>
+                        <select>
+                            <option value="">Selecione um serviço...</option>
+                            <option>Canalização – Água e Gás</option>
+                            <option>Colunas de Água e Gás em Edifícios</option>
+                            <option>Assistência a Condomínios</option>
+                            <option>Ar Condicionado</option>
+                            <option>Esquentadores</option>
+                            <option>Termoacumuladores</option>
+                            <option>Sistemas de Rega</option>
+                            <option>Reparação de Fuga de Água</option>
+                            <option>Reparação de Fuga de Gás</option>
+                            <option>Soldaduras em Tubos de Chumbo</option>
+                            <option>Substituição de Olho de Boi</option>
+                            <option>Outro</option>
+                        </select>
+                    </div>
+                    <div class="fg"><label>Mensagem</label><textarea placeholder="Descreva o trabalho ou a situação que necessita de assistência..."></textarea></div>
+                    <button type="submit" class="f-sub"><i class="fas fa-paper-plane"></i> &nbsp;Enviar Pedido</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="ft-grid">
+            <div class="ft-brand">
+                <a href="#inicio" class="logo">
+                    <img src="public/logo.png.png" alt="Almafluxo">
+                    <div class="logo-txt"><span class="nm">Almafluxo</span><span class="tg">Canalização · Água · Gás</span></div>
+                </a>
+                <p>Empresa credenciada pela DGEG, especializada em canalização, água e gás. Profissionalismo, segurança e qualidade ao seu serviço em Lisboa e região.</p>
+                <div class="ft-soc">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/351XXXXXXXXX" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div class="ft-col">
+                <h4>Serviços</h4>
+                <ul>
+                    <li><a href="#servicos">Canalização – Água e Gás</a></li>
+                    <li><a href="#servicos">Colunas de Edifícios</a></li>
+                    <li><a href="#servicos">Assistência a Condomínios</a></li>
+                    <li><a href="#servicos">Ar Condicionado</a></li>
+                    <li><a href="#servicos">Esquentadores</a></li>
+                    <li><a href="#servicos">Termoacumuladores</a></li>
+                    <li><a href="#servicos">Sistemas de Rega</a></li>
+                </ul>
+            </div>
+            <div class="ft-col">
+                <h4>Especialidades</h4>
+                <ul>
+                    <li><a href="#servicos">Reparação Fuga de Água</a></li>
+                    <li><a href="#servicos">Reparação Fuga de Gás</a></li>
+                    <li><a href="#servicos">Soldaduras Tubos de Chumbo</a></li>
+                    <li><a href="#servicos">Substituição Olho de Boi</a></li>
+                </ul>
+            </div>
+            <div class="ft-col">
+                <h4>Contactos</h4>
+                <ul>
+                    <li><a href="tel:+351XXXXXXXXX">+351 XXX XXX XXX</a></li>
+                    <li><a href="mailto:geral@almafluxo.pt">geral@almafluxo.pt</a></li>
+                    <li><a href="https://wa.me/351XXXXXXXXX">WhatsApp</a></li>
+                    <li><a href="#sobre">Lisboa e Região</a></li>
+                    <li><a href="#sobre">Credenciada DGEG</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="ft-bot">
+            <p>© 2025 Almafluxo Lda · Todos os direitos reservados · Credenciada pela DGEG · <a href="https://almafluxo.pt" style="color:inherit">almafluxo.pt</a></p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Header scroll
+    const hdr = document.getElementById('hdr');
+    window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', window.scrollY > 40));
+
+    // Burger menu
+    const burger = document.getElementById('burger');
+    const mobMenu = document.getElementById('mob-menu');
+    burger.addEventListener('click', () => {
+        burger.classList.toggle('on');
+        mobMenu.classList.toggle('on');
+    });
+
+    // Mobile services dropdown
+    document.getElementById('mob-srv-tog').addEventListener('click', () => {
+        document.getElementById('mob-srv-body').classList.toggle('on');
+    });
+
+    // Close mobile menu on nav click
+    mobMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+        burger.classList.remove('on');
+        mobMenu.classList.remove('on');
+    }));
+
+    // Intersection observer for fade-in
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('vis'); obs.unobserve(e.target); } });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fi').forEach(el => obs.observe(el));
+
+    // Active nav link
+    const secs = document.querySelectorAll('section[id]');
+    window.addEventListener('scroll', () => {
+        let cur = '';
+        secs.forEach(s => { if (window.scrollY >= s.offsetTop - 90) cur = s.id; });
+        document.querySelectorAll('.nl').forEach(l => l.classList.toggle('act', l.getAttribute('href') === '#' + cur));
+    });
+
+    // Hero image zoom
+    setTimeout(() => { const h = document.getElementById('hero-img'); if (h) h.style.transform = 'scale(1)'; }, 200);
+
+    // Form submit
+    document.getElementById('contact-form').addEventListener('submit', e => {
+        e.preventDefault();
+        const btn = e.target.querySelector('.f-sub');
+        btn.textContent = '✓ Pedido enviado! Entraremos em contacto brevemente.';
+        btn.style.background = '#25D366';
+        btn.disabled = true;
+    });
+</script>
+</body>
+</html>
