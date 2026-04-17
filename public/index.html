@@ -187,9 +187,12 @@
 
         /* Hero – EPIC */
         .hero {
-            position: relative; min-height: 100vh; display: flex; align-items: center;
+            position: relative;
+            height: 100vh;
+            height: 100dvh;
+            min-height: 620px;
+            display: flex; align-items: center;
             overflow: hidden;
-            clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
         }
         .hero-img {
             position: absolute; inset: 0; width: 100%; height: 100%;
@@ -234,7 +237,8 @@
             position: relative; z-index: 3;
             display: grid; grid-template-columns: 1fr 360px;
             gap: 52px; align-items: center;
-            padding: 130px 0 115px;
+            padding: 90px 0 60px;
+            width: 100%;
         }
         .hero-cnt { max-width: 640px; }
         .hero-bdg {
@@ -562,7 +566,7 @@
             .srv-grid { grid-template-columns: repeat(2,1fr); }
             .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
             .strip-grid { grid-template-columns: repeat(4,1fr); }
-            .hero-layout { grid-template-columns: 1fr; padding: 120px 0 100px; }
+            .hero-layout { grid-template-columns: 1fr; padding: 90px 0 60px; }
             .hero-card { display: none; }
             .hero-scroll { display: none; }
         }
@@ -580,7 +584,7 @@
             .fg-row { grid-template-columns: 1fr; }
             .c-form { padding: 24px; }
             .strip-grid { grid-template-columns: repeat(4,1fr); }
-            .hero-layout { grid-template-columns: 1fr; padding: 110px 0 90px; }
+            .hero-layout { grid-template-columns: 1fr; padding: 80px 0 50px; }
             .hero-card { display: none; }
             .hero-scroll { display: none; }
             .hero-stats { flex-wrap: wrap; }
@@ -710,8 +714,8 @@
                         <div class="lbl">Resposta Rápida</div>
                     </div>
                     <div class="hero-stat">
-                        <div class="num">100%</div>
-                        <div class="lbl">Garantido</div>
+                        <div class="num">LX</div>
+                        <div class="lbl">Lisboa e Região</div>
                     </div>
                 </div>
             </div>
