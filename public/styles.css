@@ -495,7 +495,7 @@ ul { list-style: none; }
 .fg input, .fg select, .fg textarea {
     width: 100%; padding: 11px 14px;
     border: 2px solid var(--border); border-radius: var(--r1);
-    font-family: 'Gelasio', serif; font-size: .88rem;
+    font-family: 'Fustat', sans-serif; font-size: .88rem;
     color: var(--text); background: white; transition: border-color .2s;
 }
 .fg input:focus, .fg select:focus, .fg textarea:focus { outline: none; border-color: var(--p); }
@@ -505,7 +505,7 @@ ul { list-style: none; }
     width: 100%; padding: 13px;
     background: var(--p); color: white;
     border: none; border-radius: 50px;
-    font-family: 'Gelasio', serif; font-size: .97rem;
+    font-family: 'Fustat', sans-serif; font-size: .97rem;
     font-weight: 600; cursor: pointer; transition: var(--ease);
 }
 .f-sub:hover { background: var(--dark); transform: translateY(-2px); }
