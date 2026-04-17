@@ -412,6 +412,9 @@
         @media (max-width: 768px) {
             .nav, .nav-cta { display: none; }
             .burger { display: flex; }
+            /* Esconder tagline do logo para não fazer wrap */
+            .logo-txt .tg { display: none; }
+            .logo img { height: 40px; }
             .about-grid { grid-template-columns: 1fr; }
             .about-img-wrap img { height: 280px; }
             .contact-grid { grid-template-columns: 1fr; }
@@ -428,6 +431,7 @@
             .about, .services, .gallery, .contact { padding: 60px 0; }
             .seo { padding: 52px 0; }
             .cert { padding: 52px 0; }
+            .cert h2 { font-size: 1.4rem; }
             .hero-cnt { padding: 88px 0 56px; }
             .sec-head { margin-bottom: 36px; }
         }
