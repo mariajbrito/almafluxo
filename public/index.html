@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Almafluxo Lda – Canalização, Reparação de Fugas de Água e Gás em Lisboa</title>
-    <meta name="description" content="Almafluxo Lda – Especialistas em reparação de fuga de água, reparação de fuga de gás, soldaduras em tubos de chumbo e substituição de olho de boi. Empresa credenciada pela DGEG. Lisboa e região.">
-    <meta name="keywords" content="reparação fuga de água, reparação fuga de gás, soldaduras em tubos de chumbo, substituição de olho de boi, canalização, ar condicionado, esquentador, termoacumulador, sistemas de rega, DGEG, Lisboa">
+    <title>Almafluxo Lda – Canalização, Reparação de Fugas de Água e Gás em Lisboa, Almada e Setúbal</title>
+    <meta name="description" content="Almafluxo Lda – Especialistas em reparação de fuga de água, reparação de fuga de gás, soldaduras em tubos de chumbo e substituição de olho de boi. Empresa credenciada pela DGEG. Lisboa, Almada, Setúbal e região.">
+    <meta name="keywords" content="reparação fuga de água, reparação fuga de gás, soldaduras em tubos de chumbo, substituição de olho de boi, canalização, ar condicionado, esquentador, termoacumulador, sistemas de rega, DGEG, Lisboa, Almada, Setúbal">
     <meta name="author" content="Almafluxo Lda">
     <meta name="robots" content="index, follow">
     <meta property="og:title" content="Almafluxo Lda – Especialistas em Canalização, Água e Gás">
-    <meta property="og:description" content="Empresa credenciada pela DGEG. Reparação de fugas de água e gás, canalização, ar condicionado e sistemas de rega em Lisboa.">
+    <meta property="og:description" content="Empresa credenciada pela DGEG. Reparação de fugas de água e gás, canalização, ar condicionado e sistemas de rega em Lisboa, Almada e Setúbal.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://almafluxo.pt">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -185,30 +185,184 @@
         .mob-dd-body.on { display: block; }
         .mob-dd-body a { display: block; padding: 7px 0; color: var(--muted); font-size: .86rem; }
 
-        /* Hero */
-        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
-        .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transition: transform 7s ease; }
-        .hero-ov { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(7,24,41,.9) 0%, rgba(31,116,212,.62) 100%); z-index: 1; }
-        .hero-cnt { position: relative; z-index: 2; max-width: 680px; padding: 100px 0 80px; }
+        /* Hero – EPIC */
+        .hero {
+            position: relative; min-height: 100vh; display: flex; align-items: center;
+            overflow: hidden;
+            clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+        }
+        .hero-img {
+            position: absolute; inset: 0; width: 100%; height: 100%;
+            object-fit: cover; z-index: 0;
+            transform: scale(1.08); transition: transform 9s ease;
+            filter: brightness(.6) saturate(1.2);
+        }
+        .hero-ov {
+            position: absolute; inset: 0; z-index: 1;
+            background:
+                linear-gradient(110deg, rgba(7,24,41,.97) 0%, rgba(7,24,41,.78) 52%, rgba(31,116,212,.38) 100%),
+                linear-gradient(0deg, rgba(7,24,41,.8) 0%, transparent 55%);
+        }
+        .hero-line {
+            position: absolute; inset: 0; z-index: 2; pointer-events: none; overflow: hidden;
+        }
+        .hero-line::before {
+            content: ''; position: absolute;
+            top: -20%; right: 28%; width: 1px; height: 140%;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,179,219,.3) 45%, transparent 100%);
+            transform: rotate(12deg);
+        }
+        .hero-line::after {
+            content: ''; position: absolute;
+            top: -20%; right: 40%; width: 1px; height: 140%;
+            background: linear-gradient(180deg, transparent 0%, rgba(255,255,255,.07) 50%, transparent 100%);
+            transform: rotate(12deg);
+        }
+        .hero-particles { position: absolute; inset: 0; z-index: 2; overflow: hidden; pointer-events: none; }
+        .hero-particles span {
+            position: absolute; width: 3px; height: 3px;
+            background: rgba(0,179,219,.75); border-radius: 50%;
+            animation: floatUp var(--dur,9s) var(--delay,0s) infinite linear;
+        }
+        @keyframes floatUp {
+            0%   { transform: translateY(110vh) scale(0); opacity: 0; }
+            8%   { opacity: 1; }
+            92%  { opacity: .5; }
+            100% { transform: translateY(-15vh) scale(1.8); opacity: 0; }
+        }
+        .hero-layout {
+            position: relative; z-index: 3;
+            display: grid; grid-template-columns: 1fr 360px;
+            gap: 52px; align-items: center;
+            padding: 130px 0 115px;
+        }
+        .hero-cnt { max-width: 640px; }
         .hero-bdg {
-            display: inline-flex; align-items: center; gap: 8px;
-            background: rgba(255,255,255,.13); backdrop-filter: blur(10px);
-            border: 1px solid rgba(255,255,255,.3); color: white;
-            padding: 7px 16px; border-radius: 50px;
-            font-size: .78rem; font-weight: 600; margin-bottom: 22px;
+            display: inline-flex; align-items: center; gap: 10px;
+            background: rgba(255,255,255,.09); backdrop-filter: blur(14px);
+            border: 1px solid rgba(0,179,219,.45); color: white;
+            padding: 8px 18px; border-radius: 50px;
+            font-size: .74rem; font-weight: 700; margin-bottom: 30px;
+            letter-spacing: .06em; text-transform: uppercase;
+            animation: bdgPulse 3.5s ease-in-out infinite;
         }
-        .hero-bdg i { color: var(--s); }
-        .hero h1 { font-size: clamp(2rem, 5vw, 3.3rem); font-weight: 800; color: white; line-height: 1.15; margin-bottom: 18px; }
-        .hero h1 span { color: var(--s); }
-        .hero p { font-size: 1.07rem; color: rgba(255,255,255,.87); margin-bottom: 34px; max-width: 540px; line-height: 1.75; }
-        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
-        .hero-feats {
-            display: flex; gap: 28px; margin-top: 52px;
-            padding-top: 36px; border-top: 1px solid rgba(255,255,255,.2); flex-wrap: wrap;
+        .hero-bdg i { color: #00e5b0; }
+        .bdg-dot {
+            width: 7px; height: 7px; background: #00e5b0;
+            border-radius: 50%; animation: dotBlink 1.4s infinite;
         }
-        .hero-feat { display: flex; align-items: center; gap: 9px; color: rgba(255,255,255,.9); }
-        .hero-feat i { color: var(--s); font-size: 1rem; }
-        .hero-feat span { font-size: .87rem; font-weight: 500; }
+        @keyframes bdgPulse {
+            0%,100% { border-color: rgba(0,179,219,.45); }
+            50%      { border-color: rgba(0,179,219,.9); box-shadow: 0 0 0 4px rgba(0,179,219,.08); }
+        }
+        @keyframes dotBlink {
+            0%,100% { transform: scale(1); opacity: 1; }
+            50%      { transform: scale(1.5); opacity: .5; }
+        }
+        .hero h1 {
+            font-size: clamp(2.5rem, 5.5vw, 4.2rem); font-weight: 800;
+            color: white; line-height: 1.08; margin-bottom: 24px; letter-spacing: -.025em;
+        }
+        .hero h1 .eyebrow {
+            display: block; font-size: .3em; font-weight: 600;
+            color: rgba(255,255,255,.48); letter-spacing: .14em;
+            text-transform: uppercase; margin-bottom: 12px;
+        }
+        .hero h1 .accent {
+            background: linear-gradient(130deg, #00b3db 0%, #5aa5ec 100%);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero h1 .ul-word { position: relative; display: inline-block; }
+        .hero h1 .ul-word::after {
+            content: ''; position: absolute; bottom: 2px; left: 0; right: 0; height: 5px;
+            background: linear-gradient(90deg, #00b3db, #1f74d4); border-radius: 3px;
+            transform: scaleX(0); transform-origin: left;
+            animation: lineGrow .9s .5s forwards ease-out;
+        }
+        @keyframes lineGrow { to { transform: scaleX(1); } }
+        .hero p { font-size: 1.08rem; color: rgba(255,255,255,.77); margin-bottom: 40px; max-width: 520px; line-height: 1.8; }
+        .hero-btns { display: flex; gap: 13px; flex-wrap: wrap; margin-bottom: 48px; }
+        .hero-stats {
+            display: flex; border: 1px solid rgba(255,255,255,.13);
+            border-radius: 16px; overflow: hidden;
+            background: rgba(255,255,255,.06); backdrop-filter: blur(12px);
+        }
+        .hero-stat {
+            flex: 1; padding: 16px 12px; text-align: center;
+            border-right: 1px solid rgba(255,255,255,.09); transition: background .25s;
+        }
+        .hero-stat:last-child { border-right: none; }
+        .hero-stat:hover { background: rgba(255,255,255,.1); }
+        .hero-stat .num {
+            font-size: 1.65rem; font-weight: 800; line-height: 1;
+            background: linear-gradient(135deg, #00b3db, #fff);
+            -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+        }
+        .hero-stat .lbl { font-size: .65rem; color: rgba(255,255,255,.52); margin-top: 5px; font-weight: 500; }
+        /* Floating card */
+        .hero-card {
+            background: rgba(255,255,255,.09); backdrop-filter: blur(22px);
+            border: 1px solid rgba(255,255,255,.2); border-radius: 24px;
+            padding: 36px 26px; text-align: center; color: white;
+            box-shadow: 0 28px 64px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.18);
+            animation: cardFloat 4.5s ease-in-out infinite;
+        }
+        @keyframes cardFloat {
+            0%,100% { transform: translateY(0); }
+            50%      { transform: translateY(-10px); }
+        }
+        .card-urgency {
+            display: inline-flex; align-items: center; gap: 6px;
+            background: linear-gradient(135deg, #ff4757, #ff6b81);
+            color: white; padding: 5px 14px; border-radius: 50px;
+            font-size: .68rem; font-weight: 800; text-transform: uppercase;
+            letter-spacing: .08em; margin-bottom: 20px;
+            animation: urgPulse 1.8s infinite;
+        }
+        @keyframes urgPulse {
+            0%,100% { box-shadow: 0 0 0 0 rgba(255,71,87,.5); }
+            60%      { box-shadow: 0 0 0 9px rgba(255,71,87,0); }
+        }
+        .hero-card h3 { font-size: 1.35rem; font-weight: 800; margin-bottom: 8px; }
+        .hero-card > p { font-size: .83rem; color: rgba(255,255,255,.62); margin-bottom: 22px; line-height: 1.65; }
+        .hero-card .phone-big {
+            display: block; font-size: 1.6rem; font-weight: 800; color: white;
+            margin-bottom: 22px; letter-spacing: .02em;
+            text-shadow: 0 0 24px rgba(0,179,219,.5);
+        }
+        .hero-card .phone-big i { color: var(--s); margin-right: 6px; font-size: 1.15rem; }
+        .card-cta {
+            display: flex; align-items: center; justify-content: center; gap: 8px;
+            padding: 13px; border-radius: 12px; font-weight: 700; font-size: .88rem;
+            margin-bottom: 9px; transition: all .25s; cursor: pointer;
+        }
+        .card-cta-call { background: white; color: var(--dark); }
+        .card-cta-call:hover { background: var(--s); color: white; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,179,219,.3); }
+        .card-cta-wa   { background: #25D366; color: white; }
+        .card-cta-wa:hover   { background: #1dbd5a; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(37,211,102,.3); }
+        .card-footer {
+            margin-top: 16px; padding-top: 16px;
+            border-top: 1px solid rgba(255,255,255,.12);
+            font-size: .72rem; color: rgba(255,255,255,.4);
+            display: flex; align-items: center; justify-content: center; gap: 6px;
+        }
+        /* Scroll cue */
+        .hero-scroll {
+            position: absolute; bottom: 52px; left: 50%;
+            transform: translateX(-50%); z-index: 10;
+            display: flex; flex-direction: column; align-items: center; gap: 8px;
+            color: rgba(255,255,255,.42); font-size: .67rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase;
+        }
+        .scroll-mouse {
+            width: 22px; height: 36px;
+            border: 2px solid rgba(255,255,255,.32); border-radius: 11px;
+            display: flex; align-items: flex-start; justify-content: center; padding-top: 5px;
+        }
+        .scroll-dot { width: 3px; height: 7px; background: rgba(255,255,255,.55); border-radius: 2px; animation: sDot 1.6s ease-in-out infinite; }
+        @keyframes sDot {
+            0%,100% { transform: translateY(0); opacity: 1; }
+            55%      { transform: translateY(11px); opacity: .15; }
+        }
 
         /* Strip */
         .strip { background: linear-gradient(135deg, var(--dark), var(--p)); padding: 28px 0; }
@@ -408,6 +562,9 @@
             .srv-grid { grid-template-columns: repeat(2,1fr); }
             .ft-grid { grid-template-columns: 1fr 1fr; gap: 28px; }
             .strip-grid { grid-template-columns: repeat(4,1fr); }
+            .hero-layout { grid-template-columns: 1fr; padding: 120px 0 100px; }
+            .hero-card { display: none; }
+            .hero-scroll { display: none; }
         }
         @media (max-width: 768px) {
             .nav, .nav-cta { display: none; }
@@ -423,7 +580,11 @@
             .fg-row { grid-template-columns: 1fr; }
             .c-form { padding: 24px; }
             .strip-grid { grid-template-columns: repeat(4,1fr); }
-            .hero-feats { gap: 18px; }
+            .hero-layout { grid-template-columns: 1fr; padding: 110px 0 90px; }
+            .hero-card { display: none; }
+            .hero-scroll { display: none; }
+            .hero-stats { flex-wrap: wrap; }
+            .hero-stat { min-width: 40%; }
         }
         @media (max-width: 480px) {
             .strip-grid { grid-template-columns: repeat(2,1fr); }
@@ -501,22 +662,81 @@
 <section id="inicio" class="hero">
     <img class="hero-img" id="hero-img" src="reparaçãodefugasdeágua.jpeg.jpeg" alt="Reparação de fugas de água e gás – Almafluxo">
     <div class="hero-ov"></div>
+    <div class="hero-line"></div>
+    <div class="hero-particles">
+        <span style="--dur:9s;--delay:0s;left:7%"></span>
+        <span style="--dur:12s;--delay:2.2s;left:17%"></span>
+        <span style="--dur:8s;--delay:.8s;left:31%"></span>
+        <span style="--dur:14s;--delay:4s;left:44%"></span>
+        <span style="--dur:10s;--delay:3.1s;left:61%"></span>
+        <span style="--dur:11s;--delay:1.4s;left:74%"></span>
+        <span style="--dur:9s;--delay:5.2s;left:87%"></span>
+        <span style="--dur:13s;--delay:2.7s;left:24%"></span>
+        <span style="--dur:7s;--delay:.4s;left:54%"></span>
+        <span style="--dur:15s;--delay:3.6s;left:69%"></span>
+        <span style="--dur:10s;--delay:6s;left:92%"></span>
+    </div>
     <div class="container">
-        <div class="hero-cnt">
-            <div class="hero-bdg"><i class="fas fa-shield-halved"></i> Empresa Credenciada pela DGEG</div>
-            <h1>Especialistas em <span>Canalização,</span><br>Água e Gás</h1>
-            <p>Reparação de fugas de água e gás, soldaduras em tubos de chumbo, substituição de olho de boi e instalação de sistemas completos. Profissionalismo e qualidade garantidos.</p>
-            <div class="hero-btns">
-                <a href="#contactos" class="btn btn-p"><i class="fas fa-phone"></i> Pedir Orçamento</a>
-                <a href="https://wa.me/351967196821" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+        <div class="hero-layout">
+            <div class="hero-cnt">
+                <div class="hero-bdg">
+                    <span class="bdg-dot"></span>
+                    <i class="fas fa-shield-halved"></i>
+                    Empresa Credenciada pela DGEG
+                </div>
+                <h1>
+                    <span class="eyebrow">Lisboa e Região · Especialistas</span>
+                    Soluções em<br>
+                    <span class="accent ul-word">Canalização,</span><br>
+                    Água e Gás
+                </h1>
+                <p>Reparação de fugas de água e gás, soldaduras em tubos de chumbo, substituição de olho de boi e instalação de sistemas completos. Profissionalismo e qualidade garantidos em cada intervenção.</p>
+                <div class="hero-btns">
+                    <a href="#contactos" class="btn btn-p"><i class="fas fa-file-invoice"></i> Pedir Orçamento</a>
+                    <a href="https://wa.me/351967196821" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                    <a href="#servicos" class="btn btn-out"><i class="fas fa-arrow-down"></i> Ver Serviços</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="hero-stat">
+                        <div class="num">+20</div>
+                        <div class="lbl">Anos de Experiência</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="num">DGEG</div>
+                        <div class="lbl">Credenciado</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="num">24h</div>
+                        <div class="lbl">Resposta Rápida</div>
+                    </div>
+                    <div class="hero-stat">
+                        <div class="num">100%</div>
+                        <div class="lbl">Garantido</div>
+                    </div>
+                </div>
             </div>
-            <div class="hero-feats">
-                <div class="hero-feat"><i class="fas fa-bolt"></i><span>Resposta Rápida</span></div>
-                <div class="hero-feat"><i class="fas fa-certificate"></i><span>Credenciado DGEG</span></div>
-                <div class="hero-feat"><i class="fas fa-thumbs-up"></i><span>Trabalho Garantido</span></div>
-                <div class="hero-feat"><i class="fas fa-map-marker-alt"></i><span>Lisboa e Região</span></div>
+            <div class="hero-card">
+                <div class="card-urgency"><i class="fas fa-bolt"></i> Urgência</div>
+                <h3>Precisa de Ajuda?</h3>
+                <p>Fuga de água ou gás? A nossa equipa intervém rapidamente.</p>
+                <a href="tel:+351967196821" class="phone-big">
+                    <i class="fas fa-phone"></i>967 196 821
+                </a>
+                <a href="tel:+351967196821" class="card-cta card-cta-call">
+                    <i class="fas fa-phone"></i> Ligar Agora
+                </a>
+                <a href="https://wa.me/351967196821" class="card-cta card-cta-wa" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Enviar WhatsApp
+                </a>
+                <div class="card-footer">
+                    <i class="fas fa-map-marker-alt"></i> Lisboa e Região · Lun–Sex 8h–18h
+                </div>
             </div>
         </div>
+    </div>
+    <div class="hero-scroll">
+        <div class="scroll-mouse"><div class="scroll-dot"></div></div>
+        <span>Descobrir</span>
     </div>
 </section>
 
@@ -548,7 +768,7 @@
                     <span class="sec-tag">Sobre Nós</span>
                     <h2 class="sec-title">A Almafluxo ao Seu Serviço</h2>
                 </div>
-                <p class="about-txt">A <strong>Almafluxo Lda</strong> é uma empresa especializada em canalização, instalação e manutenção de sistemas de água e gás. Com vasta experiência no sector, prestamos um serviço de excelência a particulares, condomínios e empresas em Lisboa e região.</p>
+                <p class="about-txt">A <strong>Almafluxo Lda</strong> é uma empresa especializada em canalização, instalação e manutenção de sistemas de água e gás. Com vasta experiência no sector, prestamos um serviço de excelência a particulares, condomínios e empresas em Lisboa, Almada, Setúbal e arredores.</p>
                 <p class="about-txt">A nossa equipa é composta por profissionais qualificados e certificados, garantindo que todos os trabalhos são executados com rigor técnico, segurança e respeito pelas normas em vigor em Portugal.</p>
                 <div class="about-feats">
                     <div class="about-feat">
@@ -663,7 +883,7 @@
         <div class="seo-grid">
             <div class="seo-card fi">
                 <h3><i class="fas fa-tint-slash"></i> Reparação de Fuga de Água</h3>
-                <p>Uma <strong>fuga de água</strong> pode causar danos graves se não for tratada com rapidez. A Almafluxo intervém com urgência na <strong>reparação de fugas de água</strong> em tubagens, juntas, válvulas e ramais, minimizando prejuízos e garantindo soluções duradouras para habitações, edifícios e condomínios em Lisboa e região.</p>
+                <p>Uma <strong>fuga de água</strong> pode causar danos graves se não for tratada com rapidez. A Almafluxo intervém com urgência na <strong>reparação de fugas de água</strong> em tubagens, juntas, válvulas e ramais, minimizando prejuízos e garantindo soluções duradouras para habitações, edifícios e condomínios em Lisboa, Almada, Setúbal e região.</p>
             </div>
             <div class="seo-card fi">
                 <h3><i class="fas fa-fire-extinguisher"></i> Reparação de Fuga de Gás</h3>
@@ -671,7 +891,7 @@
             </div>
             <div class="seo-card fi">
                 <h3><i class="fas fa-wrench"></i> Soldaduras em Tubos de Chumbo</h3>
-                <p>Realizamos <strong>soldaduras em tubos de chumbo</strong> em edifícios antigos, uma especialidade que requer experiência e técnica apurada. Esta intervenção é essencial na manutenção de infraestruturas de água em imóveis de construção anterior às décadas de 1970–80, muito comuns em Lisboa.</p>
+                <p>Realizamos <strong>soldaduras em tubos de chumbo</strong> em edifícios antigos, uma especialidade que requer experiência e técnica apurada. Esta intervenção é essencial na manutenção de infraestruturas de água em imóveis de construção anterior às décadas de 1970–80, muito comuns em Lisboa e Almada.</p>
             </div>
             <div class="seo-card fi">
                 <h3><i class="fas fa-circle-dot"></i> Substituição de Olho de Boi</h3>
@@ -794,7 +1014,7 @@
                     <img src="logo.png.png" alt="Almafluxo">
                     <div class="logo-txt"><span class="nm">Almafluxo</span><span class="tg">Canalização · Água · Gás</span></div>
                 </a>
-                <p>Empresa credenciada pela DGEG, especializada em canalização, água e gás. Profissionalismo, segurança e qualidade ao seu serviço em Lisboa e região.</p>
+                <p>Empresa credenciada pela DGEG, especializada em canalização, água e gás. Profissionalismo, segurança e qualidade ao seu serviço em Lisboa, Almada, Setúbal e região.</p>
                 <div class="ft-soc">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
@@ -878,8 +1098,8 @@
         document.querySelectorAll('.nl').forEach(l => l.classList.toggle('act', l.getAttribute('href') === '#' + cur));
     });
 
-    // Hero image zoom
-    setTimeout(() => { const h = document.getElementById('hero-img'); if (h) h.style.transform = 'scale(1)'; }, 200);
+    // Hero image Ken Burns
+    setTimeout(() => { const h = document.getElementById('hero-img'); if (h) h.style.transform = 'scale(1)'; }, 150);
 
     // Form submit
     document.getElementById('contact-form').addEventListener('submit', e => {
