@@ -423,18 +423,48 @@
             .fg-row { grid-template-columns: 1fr; }
             .c-form { padding: 24px; }
             .strip-grid { grid-template-columns: repeat(4,1fr); }
-            .hero-feats { gap: 18px; }
+            .hero-feats { gap: 14px; flex-wrap: wrap; }
+            /* Reduzir padding vertical das secções */
+            .about, .services, .gallery, .contact { padding: 60px 0; }
+            .seo { padding: 52px 0; }
+            .cert { padding: 52px 0; }
+            .hero-cnt { padding: 88px 0 56px; }
+            .sec-head { margin-bottom: 36px; }
         }
         @media (max-width: 480px) {
             .strip-grid { grid-template-columns: repeat(2,1fr); }
             .srv-grid { grid-template-columns: 1fr; }
+            /* Ecrãs pequenos: padding reduzido */
+            .container { padding: 0 16px; }
+            .about, .services, .gallery, .contact { padding: 48px 0; }
+            .seo { padding: 40px 0; }
+            .cert { padding: 44px 0; }
+            .hero-cnt { padding: 80px 0 48px; }
+            .hero-feats { gap: 10px; margin-top: 36px; padding-top: 24px; }
+            .hero-feat span { font-size: .82rem; }
+            /* Caixa DGEG empilhada */
+            .dgeg { flex-direction: column; text-align: center; gap: 10px; }
+            .dgeg-ic { margin: 0 auto; }
+            /* Formulário */
+            .c-form { padding: 20px 16px; }
+            /* Botões hero em coluna */
+            .hero-btns { flex-direction: column; gap: 10px; }
+            .hero-btns .btn { justify-content: center; }
+            /* Footer bottom */
+            .ft-bot { font-size: .72rem; line-height: 1.6; }
+            /* Galeria em coluna única nos ecrãs mais pequenos */
+            .gal-grid { grid-template-columns: 1fr; }
+            .gal-i.wide { grid-column: span 1; }
+            .gal-i img, .gal-i.wide img { height: 200px; }
+            /* WhatsApp float mais pequeno */
+            .wa-float { width: 50px; height: 50px; font-size: 1.3rem; bottom: 18px; right: 18px; }
         }
     </style>
 </head>
 <body>
 
 <!-- WhatsApp Float -->
-<a href="https://wa.me/351XXXXXXXXX" class="wa-float" target="_blank" aria-label="Contactar via WhatsApp">
+<a href="https://wa.me/351967196821" class="wa-float" target="_blank" aria-label="Contactar via WhatsApp">
     <i class="fab fa-whatsapp"></i>
     <span class="tip">Fale connosco no WhatsApp</span>
 </a>
@@ -508,7 +538,7 @@
             <p>Reparação de fugas de água e gás, soldaduras em tubos de chumbo, substituição de olho de boi e instalação de sistemas completos. Profissionalismo e qualidade garantidos.</p>
             <div class="hero-btns">
                 <a href="#contactos" class="btn btn-p"><i class="fas fa-phone"></i> Pedir Orçamento</a>
-                <a href="https://wa.me/351XXXXXXXXX" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="https://wa.me/351967196821" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
             </div>
             <div class="hero-feats">
                 <div class="hero-feat"><i class="fas fa-bolt"></i><span>Resposta Rápida</span></div>
@@ -732,22 +762,22 @@
                 <div class="c-items">
                     <div class="c-item">
                         <div class="ic"><i class="fas fa-phone"></i></div>
-                        <div><h4>Telefone</h4><a href="tel:+351XXXXXXXXX">+351 XXX XXX XXX</a></div>
+                        <div><h4>Telemóvel</h4><a href="tel:+351967196821">+351 967 196 821</a></div>
                     </div>
                     <div class="c-item">
                         <div class="ic"><i class="fas fa-envelope"></i></div>
-                        <div><h4>Email</h4><a href="mailto:geral@almafluxo.pt">geral@almafluxo.pt</a></div>
+                        <div><h4>Email</h4><a href="mailto:geral@almafluxo.pt">geral@almafluxo.pt</a><br><a href="mailto:almafluxo@gmail.com">almafluxo@gmail.com</a></div>
                     </div>
                     <div class="c-item">
                         <div class="ic"><i class="fas fa-map-marker-alt"></i></div>
-                        <div><h4>Zona de Atuação</h4><p>Lisboa e Região</p></div>
+                        <div><h4>Morada</h4><p>Rua de Dentro 27 5ºC<br>2825-007 Almada</p></div>
                     </div>
                     <div class="c-item">
                         <div class="ic"><i class="fas fa-clock"></i></div>
                         <div><h4>Horário</h4><p>Segunda a Sexta: 8h00 – 18h00</p></div>
                     </div>
                 </div>
-                <a href="https://wa.me/351XXXXXXXXX" class="wa-cta" target="_blank">
+                <a href="https://wa.me/351967196821" class="wa-cta" target="_blank">
                     <i class="fab fa-whatsapp"></i> Enviar Mensagem no WhatsApp
                 </a>
             </div>
@@ -798,7 +828,7 @@
                 <div class="ft-soc">
                     <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://wa.me/351XXXXXXXXX" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://wa.me/351967196821" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
                 </div>
             </div>
             <div class="ft-col">
@@ -825,10 +855,11 @@
             <div class="ft-col">
                 <h4>Contactos</h4>
                 <ul>
-                    <li><a href="tel:+351XXXXXXXXX">+351 XXX XXX XXX</a></li>
+                    <li><a href="tel:+351967196821">+351 967 196 821</a></li>
                     <li><a href="mailto:geral@almafluxo.pt">geral@almafluxo.pt</a></li>
-                    <li><a href="https://wa.me/351XXXXXXXXX">WhatsApp</a></li>
-                    <li><a href="#sobre">Lisboa e Região</a></li>
+                    <li><a href="mailto:almafluxo@gmail.com">almafluxo@gmail.com</a></li>
+                    <li><a href="https://wa.me/351967196821">WhatsApp</a></li>
+                    <li><a href="#contactos">Rua de Dentro 27 5ºC, Almada</a></li>
                     <li><a href="#sobre">Credenciada DGEG</a></li>
                 </ul>
             </div>
