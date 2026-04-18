@@ -186,10 +186,10 @@
         .mob-dd-body a { display: block; padding: 7px 0; color: var(--muted); font-size: .86rem; }
 
         /* Hero */
-        .hero { position: relative; min-height: 100vh; display: flex; align-items: center; overflow: hidden; }
+        .hero { position: relative; min-height: 100svh; display: flex; align-items: flex-start; overflow: hidden; }
         .hero-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0; transition: transform 7s ease; }
         .hero-ov { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(7,24,41,.9) 0%, rgba(31,116,212,.62) 100%); z-index: 1; }
-        .hero-cnt { position: relative; z-index: 2; max-width: 680px; padding: 100px 0 80px; }
+        .hero-cnt { position: relative; z-index: 2; max-width: 680px; padding: 110px 0 80px; }
         .hero-bdg {
             display: inline-flex; align-items: center; gap: 8px;
             background: rgba(255,255,255,.13); backdrop-filter: blur(10px);
@@ -433,9 +433,9 @@
             .seo { padding: 52px 0; }
             .cert { padding: 52px 0; }
             .cert h2 { font-size: 1.4rem; }
-            /* Hero alinhado ao topo para evitar conteúdo cortado atrás do header */
-            .hero { align-items: flex-start; }
-            .hero-cnt { padding: 96px 0 56px; }
+            .hero-cnt { padding: 88px 0 44px; }
+            .hero p { font-size: .97rem; margin-bottom: 24px; }
+            .hero-feats { margin-top: 32px; padding-top: 24px; gap: 16px; }
             .sec-head { margin-bottom: 36px; }
         }
         @media (max-width: 480px) {
@@ -446,9 +446,10 @@
             .about, .services, .gallery, .contact { padding: 48px 0; }
             .seo { padding: 40px 0; }
             .cert { padding: 44px 0; }
-            .hero-cnt { padding: 90px 0 48px; }
-            .hero-feats { gap: 10px; margin-top: 36px; padding-top: 24px; }
-            .hero-feat span { font-size: .82rem; }
+            .hero-cnt { padding: 82px 0 40px; }
+            .hero h1 { font-size: 1.75rem; }
+            .hero p { font-size: .92rem; margin-bottom: 20px; line-height: 1.6; }
+            .hero-feats { display: none; }
             /* Caixa DGEG empilhada */
             .dgeg { flex-direction: column; text-align: center; gap: 10px; }
             .dgeg-ic { margin: 0 auto; }
@@ -546,6 +547,7 @@
             <div class="hero-btns">
                 <a href="#contactos" class="btn btn-p"><i class="fas fa-phone"></i> Pedir Orçamento</a>
                 <a href="https://wa.me/351967196821" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+                <a href="#servicos" class="btn btn-out"><i class="fas fa-arrow-down"></i> Ver Serviços</a>
             </div>
             <div class="hero-feats">
                 <div class="hero-feat"><i class="fas fa-bolt"></i><span>Resposta Rápida</span></div>
