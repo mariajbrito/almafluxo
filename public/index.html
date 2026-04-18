@@ -495,6 +495,20 @@
     </div>
 </footer>
 
+<!-- Service Modal (mobile) -->
+<div id="srv-modal" class="srv-modal-ov" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="srv-modal-box">
+        <button class="srv-modal-close" id="srv-modal-close" aria-label="Fechar"><i class="fas fa-times"></i></button>
+        <div class="srv-modal-img" id="srv-modal-img"></div>
+        <div class="srv-modal-body">
+            <div class="srv-modal-ic" id="srv-modal-ic"></div>
+            <h3 id="srv-modal-title"></h3>
+            <p id="srv-modal-desc"></p>
+            <a href="#contactos" class="srv-modal-cta" id="srv-modal-cta"><i class="fas fa-file-invoice"></i> Pedir Orçamento</a>
+        </div>
+    </div>
+</div>
+
 <script>
     // Header scroll
     const hdr = document.getElementById('hdr');
@@ -535,6 +549,38 @@
 
     // Hero image Ken Burns
     setTimeout(() => { const h = document.getElementById('hero-img'); if (h) h.style.transform = 'scale(1)'; }, 150);
+
+    // Service cards modal (mobile only)
+    const srvModal = document.getElementById('srv-modal');
+    function openSrvModal(card) {
+        const title = card.querySelector('h3').textContent;
+        const desc = card.querySelector('.srv-body p').textContent;
+        const icon = card.querySelector('.srv-ic').innerHTML;
+        const img = card.querySelector('.srv-img img');
+        document.getElementById('srv-modal-title').textContent = title;
+        document.getElementById('srv-modal-desc').textContent = desc;
+        document.getElementById('srv-modal-ic').innerHTML = icon;
+        const modalImg = document.getElementById('srv-modal-img');
+        if (img) { modalImg.innerHTML = '<img src="' + img.src + '" alt="' + img.alt + '">'; modalImg.style.display = ''; }
+        else { modalImg.style.display = 'none'; }
+        srvModal.classList.add('on');
+        srvModal.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeSrvModal() {
+        srvModal.classList.remove('on');
+        srvModal.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+    document.querySelectorAll('.srv-card').forEach(card => {
+        card.addEventListener('click', e => {
+            if (window.innerWidth <= 480) { e.preventDefault(); openSrvModal(card); }
+        });
+    });
+    document.getElementById('srv-modal-close').addEventListener('click', closeSrvModal);
+    srvModal.addEventListener('click', e => { if (e.target === srvModal) closeSrvModal(); });
+    document.getElementById('srv-modal-cta').addEventListener('click', closeSrvModal);
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSrvModal(); });
 
     // Form submit
     document.getElementById('contact-form').addEventListener('submit', e => {
