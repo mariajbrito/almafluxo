@@ -421,7 +421,8 @@
             .seo-grid { grid-template-columns: 1fr; }
             .gal-grid { grid-template-columns: repeat(2,1fr); }
             .gal-i img, .gal-i.wide img { height: 160px; }
-            .gal-i.wide { grid-column: span 2; }
+            /* Remover wide em mobile para grelha uniforme de 2 colunas */
+            .gal-i.wide { grid-column: span 1; }
             .ft-grid { grid-template-columns: 1fr; gap: 22px; }
             .fg-row { grid-template-columns: 1fr; }
             .c-form { padding: 24px; }
@@ -432,18 +433,20 @@
             .seo { padding: 52px 0; }
             .cert { padding: 52px 0; }
             .cert h2 { font-size: 1.4rem; }
-            .hero-cnt { padding: 88px 0 56px; }
+            /* Hero alinhado ao topo para evitar conteúdo cortado atrás do header */
+            .hero { align-items: flex-start; }
+            .hero-cnt { padding: 96px 0 56px; }
             .sec-head { margin-bottom: 36px; }
         }
         @media (max-width: 480px) {
             .strip-grid { grid-template-columns: repeat(2,1fr); }
             .srv-grid { grid-template-columns: 1fr; }
-            /* Ecrãs pequenos: padding reduzido */
-            .container { padding: 0 16px; }
+            /* Ecrãs pequenos: padding lateral confortável */
+            .container { padding: 0 20px; }
             .about, .services, .gallery, .contact { padding: 48px 0; }
             .seo { padding: 40px 0; }
             .cert { padding: 44px 0; }
-            .hero-cnt { padding: 80px 0 48px; }
+            .hero-cnt { padding: 90px 0 48px; }
             .hero-feats { gap: 10px; margin-top: 36px; padding-top: 24px; }
             .hero-feat span { font-size: .82rem; }
             /* Caixa DGEG empilhada */
