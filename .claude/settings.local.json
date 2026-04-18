@@ -13,7 +13,9 @@
       "Bash(git -C c:/Users/maria/Documents/almafluxo show HEAD:index.html)",
       "Bash(git -C c:/Users/maria/Documents/almafluxo show 699f0ac --stat)",
       "Bash(git -C c:/Users/maria/Documents/almafluxo show 04ab969:index.html)",
-      "Bash(git -C c:/Users/maria/Documents/almafluxo remote -v)"
+      "Bash(git -C c:/Users/maria/Documents/almafluxo remote -v)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo log --oneline -5)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo show 78f180f --stat)"
     ]
   }
 }
