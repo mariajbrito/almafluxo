@@ -561,8 +561,8 @@ footer { background: var(--navy); color: rgba(255,255,255,.7); padding: 56px 0 0
     .hero-layout { grid-template-columns: 1fr; padding: 86px 0 40px; }
     .hero-card { display: none; }
     .hero-scroll { display: none; }
-    /* Hero: alinhar ao topo para conteúdo não transbordar atrás do header */
-    .hero { align-items: flex-start; }
+    /* Hero: centrado; o padding-top do hero-layout compensa o header */
+    .hero { align-items: center; }
     .hero h1 { font-size: clamp(1.9rem, 7vw, 2.6rem); margin-bottom: 16px; }
     .hero p { font-size: .95rem; margin-bottom: 26px; line-height: 1.7; }
     .hero-btns { gap: 10px; margin-bottom: 28px; }
