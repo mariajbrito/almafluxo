@@ -4,7 +4,16 @@
       "mcp__claude_ai_Vercel__deploy_to_vercel",
       "Bash(git add *)",
       "Bash(git commit -m ' *)",
-      "Bash(git push *)"
+      "Bash(git push *)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo status)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo diff --stat)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo diff index.html)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo diff HEAD -- index.html)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo log --oneline -3)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo show HEAD:index.html)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo show 699f0ac --stat)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo show 04ab969:index.html)",
+      "Bash(git -C c:/Users/maria/Documents/almafluxo remote -v)"
     ]
   }
 }
