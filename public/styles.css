@@ -143,11 +143,34 @@ ul { list-style: none; }
     transition: var(--ease); margin-left: 6px;
 }
 .nav-cta:hover { background: var(--dark); transform: translateY(-1px); }
-.burger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 8px; }
-.burger span { display: block; width: 22px; height: 2px; background: var(--text); border-radius: 2px; transition: var(--ease); }
-.burger.on span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
-.burger.on span:nth-child(2) { opacity: 0; }
-.burger.on span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
+.burger {
+    display: none; position: relative; align-items: center; justify-content: center;
+    width: 42px; height: 42px; cursor: pointer; border-radius: 50%;
+    background: transparent; border: none;
+    transition: background .25s ease;
+    flex-shrink: 0;
+}
+.burger::before {
+    content: '';
+    position: absolute; inset: 0; border-radius: 50%;
+    background: var(--light);
+    transform: scale(0); opacity: 0;
+    transition: transform .3s cubic-bezier(.34,1.56,.64,1), opacity .25s ease;
+}
+.burger:hover::before, .burger.on::before { transform: scale(1); opacity: 1; }
+.burger-lines { display: flex; flex-direction: column; gap: 5px; position: relative; z-index: 1; }
+.burger span {
+    display: block; height: 2px; background: var(--text); border-radius: 2px;
+    transform-origin: center;
+    transition: transform .35s cubic-bezier(.23,1,.32,1), opacity .25s ease, width .3s ease;
+}
+.burger span:nth-child(1) { width: 22px; }
+.burger span:nth-child(2) { width: 14px; transition-delay: .04s; }
+.burger span:nth-child(3) { width: 19px; transition-delay: .08s; }
+.burger:hover span:nth-child(2) { width: 22px; }
+.burger.on span:nth-child(1) { width: 20px; transform: rotate(45deg) translate(5px, 5px); }
+.burger.on span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.burger.on span:nth-child(3) { width: 20px; transform: rotate(-45deg) translate(5px, -5px); }
 .mob-menu {
     display: none; position: fixed;
     top: 70px; left: 0; right: 0;
