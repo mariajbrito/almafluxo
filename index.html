@@ -210,6 +210,31 @@
         .hero-feat i { color: var(--s); font-size: 1rem; }
         .hero-feat span { font-size: .87rem; font-weight: 500; }
 
+        /* Urgency */
+        .urgency { background: linear-gradient(135deg, #b91c1c, #dc2626); padding: 20px 0; }
+        .urgency-inner {
+            display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
+        }
+        .urgency-icon {
+            font-size: 2rem; color: white; flex-shrink: 0;
+            animation: urgpulse 1.4s infinite;
+        }
+        @keyframes urgpulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.18); }
+        }
+        .urgency-text h3 { color: white; font-size: 1.1rem; font-weight: 800; margin-bottom: 2px; }
+        .urgency-text p { color: rgba(255,255,255,.88); font-size: .88rem; }
+        .urgency-btns { display: flex; gap: 10px; margin-left: auto; flex-wrap: wrap; }
+        .btn-urg { background: white; color: #b91c1c; font-weight: 700; }
+        .btn-urg:hover { background: #fef2f2; transform: translateY(-2px); box-shadow: 0 8px 20px rgba(0,0,0,.2); }
+        @media (max-width: 768px) {
+            .urgency { padding: 22px 0; }
+            .urgency-inner { flex-direction: column; text-align: center; gap: 14px; }
+            .urgency-btns { margin-left: 0; width: 100%; justify-content: center; }
+            .urgency-btns .btn { flex: 1; justify-content: center; font-size: .97rem; padding: 14px 18px; }
+        }
+
         /* Strip */
         .strip { background: linear-gradient(135deg, var(--dark), var(--p)); padding: 28px 0; }
         .strip-grid { display: grid; grid-template-columns: repeat(7,1fr); gap: 4px; }
@@ -522,6 +547,7 @@
 
 <!-- Mobile Menu -->
 <div class="mob-menu" id="mob-menu">
+    <a href="tel:+351967196821" class="btn btn-urg" style="display:flex;justify-content:center;gap:8px;width:100%;margin-bottom:12px;border-radius:50px;padding:13px"><i class="fas fa-phone"></i> Urgência – Ligar Agora</a>
     <a href="#inicio" class="mob-nl">Início</a>
     <a href="#sobre" class="mob-nl">Sobre Nós</a>
     <div class="mob-dd-tit" id="mob-srv-tog">Serviços <i class="fas fa-chevron-down"></i></div>
@@ -562,6 +588,23 @@
         </div>
     </div>
 </section>
+
+<!-- URGENCY -->
+<div class="urgency">
+    <div class="container">
+        <div class="urgency-inner">
+            <div class="urgency-icon"><i class="fas fa-triangle-exclamation"></i></div>
+            <div class="urgency-text">
+                <h3>Urgência – Precisa de Ajuda?</h3>
+                <p>Fuga de água ou gás? A nossa equipa intervém rapidamente.</p>
+            </div>
+            <div class="urgency-btns">
+                <a href="tel:+351967196821" class="btn btn-urg"><i class="fas fa-phone"></i> Ligar Agora</a>
+                <a href="https://wa.me/351967196821" class="btn btn-wa" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- STRIP -->
 <div class="strip">
