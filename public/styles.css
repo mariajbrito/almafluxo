@@ -634,6 +634,14 @@ footer { background: var(--navy); color: rgba(255,255,255,.7); padding: 56px 0 0
 }
 .srv-modal-cta:hover { background: var(--dark); }
 
+/* Prevent orphan last items on desktop */
+@media (min-width: 769px) {
+    .gal-i:last-child { grid-column: 2 / 4; }
+}
+@media (min-width: 1025px) {
+    .srv-card:last-child:nth-child(3n+1) { grid-column: 2 / 3; }
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
     .srv-grid { grid-template-columns: repeat(2,1fr); }
