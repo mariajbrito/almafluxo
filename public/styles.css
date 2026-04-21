@@ -365,7 +365,7 @@ ul { list-style: none; }
 }
 
 /* Urgency Bar */
-.urgency-bar { background: var(--white); border-bottom: 1px solid var(--border); padding: 18px 0; }
+.urgency-bar { display: none; background: var(--white); border-bottom: 1px solid var(--border); padding: 18px 0; }
 .urgency-bar-inner { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
 .urgency-bar-badge {
     display: inline-flex; align-items: center; gap: 6px;
@@ -634,6 +634,7 @@ footer { background: var(--navy); color: rgba(255,255,255,.7); padding: 56px 0 0
     .hero-scroll { display: none; }
 }
 @media (max-width: 768px) {
+    .urgency-bar { display: block; }
     .urgency-bar-inner { flex-wrap: wrap; gap: 10px; }
     .urgency-bar-text { flex: 1 1 100%; }
     .urgency-bar-btns { width: 100%; }
