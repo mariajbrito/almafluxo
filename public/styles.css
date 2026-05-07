@@ -771,8 +771,10 @@ footer { background: var(--navy); color: rgba(255,255,255,.7); padding: 56px 0 0
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
 .page-hero .sub {
-    font-size: 1.04rem; color: rgba(255,255,255,.72);
+    font-size: 1.08rem; color: rgba(255,255,255,.95);
     max-width: 580px; line-height: 1.78; margin-bottom: 34px;
+    text-shadow: 0 2px 12px rgba(0,0,0,.55);
+    font-weight: 500;
 }
 .page-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 .urgency-tag {
