@@ -770,7 +770,8 @@ footer { background: var(--navy); color: rgba(255,255,255,.7); padding: 56px 0 0
     background: linear-gradient(130deg, #00b3db 0%, #5aa5ec 100%);
     -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
 }
-.page-hero .sub {
+.page-hero .sub,
+.page-hero .hero-sub {
     font-size: 1.08rem; color: rgba(255,255,255,.95);
     max-width: 580px; line-height: 1.78; margin-bottom: 34px;
     text-shadow: 0 2px 12px rgba(0,0,0,.55);
