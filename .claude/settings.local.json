@@ -17,7 +17,11 @@
       "Bash(git -C c:/Users/maria/Documents/almafluxo log --oneline -5)",
       "Bash(git -C c:/Users/maria/Documents/almafluxo show 78f180f --stat)",
       "Bash(grep -v \"^[a-z-]*$\")",
-      "PowerShell($path = 'c:\\\\Users\\\\maria\\\\Documents\\\\almafluxo\\\\public\\\\index.html'; $c = Get-Content -Raw -Encoding UTF8 $path; $n = [regex]::Replace\\($c, '\\(<img src=\"/[^\"]+\"\\\\s+alt=\"[^\"]+\"\\)\\(><div class=\"gal-ov\">\\)', '$1 loading=\"lazy\" decoding=\"async\"$2'\\); Set-Content -Path $path -Value $n -Encoding UTF8 -NoNewline; Write-Output \\('changed: ' + \\($c -ne $n\\)\\))"
+      "PowerShell($path = 'c:\\\\Users\\\\maria\\\\Documents\\\\almafluxo\\\\public\\\\index.html'; $c = Get-Content -Raw -Encoding UTF8 $path; $n = [regex]::Replace\\($c, '\\(<img src=\"/[^\"]+\"\\\\s+alt=\"[^\"]+\"\\)\\(><div class=\"gal-ov\">\\)', '$1 loading=\"lazy\" decoding=\"async\"$2'\\); Set-Content -Path $path -Value $n -Encoding UTF8 -NoNewline; Write-Output \\('changed: ' + \\($c -ne $n\\)\\))",
+      "Bash(rm \"c:/Users/maria/Documents/almafluxo/public/politica-de-privacidade.html\" \"c:/Users/maria/Documents/almafluxo/public/termos-e-condicoes.html\" && ls c:/Users/maria/Documents/almafluxo/public/*.html)"
+    ],
+    "additionalDirectories": [
+      "c:\\Users\\maria\\Documents\\almafluxo\\public"
     ]
   }
 }
