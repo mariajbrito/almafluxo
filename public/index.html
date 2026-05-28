@@ -622,15 +622,15 @@
             </div>
             <div class="c-form fi">
                 <h3>Pedir Orçamento Gratuito</h3>
-                <form id="contact-form" novalidate>
+                <form id="contact-form" action="https://formspree.io/f/xqejwvgr" method="POST" novalidate>
                     <div class="fg-row">
-                        <div class="fg"><label>Nome *</label><input type="text" placeholder="O seu nome" required></div>
-                        <div class="fg"><label>Telefone *</label><input type="tel" placeholder="+351 XXX XXX XXX" required></div>
+                        <div class="fg"><label for="h-nome">Nome *</label><input type="text" id="h-nome" name="nome" placeholder="O seu nome" required></div>
+                        <div class="fg"><label for="h-telefone">Telefone *</label><input type="tel" id="h-telefone" name="telefone" placeholder="+351 XXX XXX XXX" required></div>
                     </div>
-                    <div class="fg"><label>Email</label><input type="email" placeholder="o_seu@email.pt"></div>
+                    <div class="fg"><label for="h-email">Email</label><input type="email" id="h-email" name="email" placeholder="o_seu@email.pt"></div>
                     <div class="fg">
-                        <label>Serviço Pretendido</label>
-                        <select>
+                        <label for="h-servico">Serviço Pretendido</label>
+                        <select id="h-servico" name="servico">
                             <option value="">Selecione um serviço...</option>
                             <option>Canalização – Água e Gás</option>
                             <option>Colunas de Água e Gás em Edifícios</option>
@@ -648,7 +648,7 @@
                             <option>Outro</option>
                         </select>
                     </div>
-                    <div class="fg"><label>Mensagem</label><textarea placeholder="Descreva o trabalho ou a situação que necessita de assistência..."></textarea></div>
+                    <div class="fg"><label for="h-mensagem">Mensagem</label><textarea id="h-mensagem" name="mensagem" placeholder="Descreva o trabalho ou a situação que necessita de assistência..."></textarea></div>
                     <button type="submit" class="f-sub"><i class="fas fa-paper-plane"></i> &nbsp;Enviar Pedido</button>
                 </form>
             </div>
@@ -792,12 +792,31 @@
     document.getElementById('srv-modal-cta').addEventListener('click', closeSrvModal);
     document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSrvModal(); });
 
-    document.getElementById('contact-form').addEventListener('submit', e => {
+    document.getElementById('contact-form').addEventListener('submit', async e => {
         e.preventDefault();
-        const btn = e.target.querySelector('.f-sub');
-        btn.textContent = '✓ Pedido enviado! Entraremos em contacto brevemente.';
-        btn.style.background = '#25D366';
+        const form = e.target;
+        const btn = form.querySelector('.f-sub');
+        const originalHTML = btn.innerHTML;
         btn.disabled = true;
+        btn.textContent = 'A enviar…';
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+            if (res.ok) {
+                btn.textContent = '✓ Pedido enviado! Entraremos em contacto brevemente.';
+                btn.style.background = '#25D366';
+                form.reset();
+            } else {
+                throw new Error('Envio falhou');
+            }
+        } catch (err) {
+            btn.innerHTML = originalHTML;
+            btn.disabled = false;
+            alert('Não foi possível enviar o pedido. Por favor ligue 932 597 020 ou envie email para geral@almafluxo.pt');
+        }
     });
 </script>
 </body>

@@ -150,7 +150,7 @@
 
             <div class="c-form fi">
                 <h3>Pedir Orçamento Gratuito</h3>
-                <form id="contact-form" novalidate>
+                <form id="contact-form" action="https://formspree.io/f/xqejwvgr" method="POST" novalidate>
                     <div class="fg-row">
                         <div class="fg">
                             <label for="nome">Nome *</label>
@@ -289,12 +289,31 @@
     document.querySelectorAll('.fi').forEach(el => obs.observe(el));
     const phBg = document.querySelector('.page-hero-bg');
     if (phBg) setTimeout(() => phBg.style.transform = 'scale(1)', 100);
-    document.getElementById('contact-form').addEventListener('submit', e => {
+    document.getElementById('contact-form').addEventListener('submit', async e => {
         e.preventDefault();
-        const btn = e.target.querySelector('.f-sub');
-        btn.textContent = '✓ Pedido enviado! Entraremos em contacto brevemente.';
-        btn.style.background = '#25D366';
+        const form = e.target;
+        const btn = form.querySelector('.f-sub');
+        const originalText = btn.innerHTML;
         btn.disabled = true;
+        btn.textContent = 'A enviar…';
+        try {
+            const res = await fetch(form.action, {
+                method: 'POST',
+                body: new FormData(form),
+                headers: { 'Accept': 'application/json' }
+            });
+            if (res.ok) {
+                btn.textContent = '✓ Pedido enviado! Entraremos em contacto brevemente.';
+                btn.style.background = '#25D366';
+                form.reset();
+            } else {
+                throw new Error('Envio falhou');
+            }
+        } catch (err) {
+            btn.innerHTML = originalText;
+            btn.disabled = false;
+            alert('Não foi possível enviar o pedido. Por favor ligue 932 597 020 ou envie email para geral@almafluxo.pt');
+        }
     });
 </script>
 </body>
